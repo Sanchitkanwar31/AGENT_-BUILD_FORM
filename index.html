@@ -875,6 +875,9 @@ body {
 <label class="chip"><input onchange="chk(this)" type="checkbox"/> MUV / Van</label>
 <label class="chip"><input onchange="chk(this)" type="checkbox"/> Electric (EV)</label>
 <label class="chip"><input onchange="chk(this)" type="checkbox"/> Luxury</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Truck</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Trailor</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Tipper</label>
 </div>
 </div>
 <div class="fu-field"><label>Agent instructions on vehicle preference discussion</label><textarea placeholder="e.g. Inform driver we currently have Sedan and EV options available in their city..."></textarea></div>
@@ -1854,6 +1857,54 @@ Step 5: First day briefing at hub..." style="min-height:100px"></textarea></div>
 </div>
 <div class="fu-field"><label>Other special requirements</label><textarea placeholder="e.g. Minimum typing speed 25 WPM. Own laptop required for WFH. Shift: 9 AM – 6 PM, Mon–Sat..."></textarea></div>
 </div>
+</div>
+<!-- Company Name & Info -->
+<div class="q-block" data-q="company_name_info_is_company_information_defined_for_agent">
+  <div class="q-row">
+    <div class="q-left">
+      <span class="q-code">6.1 · REQUIRED</span>
+      <span class="q-text">Company Name & Info — Is company information defined for the agent?</span>
+      <span class="q-sub">Company identity, contact details, services and intro script</span>
+    </div>
+    <span class="req r">REQUIRED</span>
+    <div class="yn">
+      <button class="yn-btn y" onclick="yt(this,'fu-companyinfo')" type="button">YES</button>
+      <button class="yn-btn n" onclick="nt(this,'fu-companyinfo')" type="button">NO</button>
+    </div>
+  </div>
+
+  <div class="followup" id="fu-companyinfo">
+    <div class="followup-label">Company Information for Agent</div>
+
+    <div class="fu-row">
+      <div class="fu-field">
+        <label>Company Name</label>
+        <input type="text" placeholder="e.g. SignoDrive Pvt. Ltd." />
+      </div>
+      <div class="fu-field">
+        <label>Brand / Calling Name</label>
+        <input type="text" placeholder="e.g. SignoDrive" />
+      </div>
+    </div>
+
+    <div class="fu-row">
+      <div class="fu-field">
+        <label>Primary Contact / Call Transferring Number</label>
+        <textarea type="text" placeholder="e.g. Rahul Sharma - +91 98xxxxxxx"></textarea>
+      </div>
+    </div>
+
+
+    <div class="fu-field">
+      <label>Cities / Regions of Operation</label>
+      <textarea placeholder="e.g. Delhi NCR, Noida, Gurgaon, Hyderabad..."></textarea>
+    </div>
+
+    <div class="fu-field">
+      <label>Agent Intro Note Using Company Info</label>
+      <textarea placeholder="e.g. Hello, I’m calling from SignoDrive. We help drivers get verified earning opportunities with fleet and platform support..."></textarea>
+    </div>
+  </div>
 </div>
 </div>
 </div>
