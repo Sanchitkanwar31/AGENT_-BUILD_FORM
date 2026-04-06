@@ -1881,31 +1881,42 @@ Step 5: First day briefing at hub..." style="min-height:100px"></textarea></div>
 </div>
 </div>
 <script>
-
-  // Init
+  // ========= CONFIG =========
   const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx9S_8euOtUIfkiztpVQzYPr5X684b7x_PASdd-xYd9v-zYNQhUJJj99_41XD3j1tyZjQ/exec";
+
+  // ========= INIT =========
   const fid = 'CABS-' + Date.now().toString(36).toUpperCase().slice(-7);
   document.getElementById('fid').textContent = fid;
-  document.getElementById('fdate').textContent = new Date().toLocaleDateString('en-IN', {day:'2-digit',month:'short',year:'numeric'});
+  document.getElementById('fdate').textContent = new Date().toLocaleDateString('en-IN', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric'
+  });
 
-  // YES → open followup
+  // hidden iframe callback flag
+  let formSubmitDone = false;
+
+  // ========= YES / NO =========
   function yt(btn, fuId) {
     const group = btn.closest('.yn');
     group.querySelectorAll('.yn-btn').forEach(b => b.classList.remove('sel'));
     btn.classList.add('sel');
+
     const fu = document.getElementById(fuId);
-    if (fu) { fu.classList.add('open'); }
+    if (fu) fu.classList.add('open');
+
     updateProgress();
   }
 
-  // NO → close followup
   function nt(btn, fuId) {
     const group = btn.closest('.yn');
     group.querySelectorAll('.yn-btn').forEach(b => b.classList.remove('sel'));
     btn.classList.add('sel');
+
     const fu = document.getElementById(fuId);
     if (fu) {
       fu.classList.remove('open');
+
       fu.querySelectorAll('input, textarea, select').forEach(el => {
         if (el.type === 'checkbox' || el.type === 'radio') {
           el.checked = false;
@@ -1913,64 +1924,193 @@ Step 5: First day briefing at hub..." style="min-height:100px"></textarea></div>
           el.value = '';
         }
       });
+
       fu.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
       fu.querySelectorAll('.tag-item').forEach(t => t.remove());
     }
+
     updateProgress();
   }
 
-  // checkbox chips
+  // ========= CHIP CHECKBOX =========
   function chk(cb) {
     const chip = cb.closest('.chip');
     if (chip) chip.classList.toggle('on', cb.checked);
   }
 
-  // dynamic tags
-  function addTag(btn) {
-    const wrap = btn.closest('.fu-field');
-    const input = wrap.querySelector('input');
-    const list = wrap.querySelector('.tag-list');
-    if (!input || !list) return;
-    const val = input.value.trim();
-    if (!val) return;
+  // ========= TAG INPUT =========
+  function addTag(event, inputEl) {
+    if (event.key !== 'Enter') return;
+    event.preventDefault();
+
+    const value = inputEl.value.trim();
+    if (!value) return;
+
+    const wrap = inputEl.closest('.tag-wrap');
+    if (!wrap) return;
+
     const tag = document.createElement('span');
     tag.className = 'tag-item';
-    tag.innerHTML = `${val}<button type="button" onclick="this.parentElement.remove()">×</button>`;
-    list.appendChild(tag);
-    input.value = '';
+    tag.innerHTML = `${value}<span class="tag-x" onclick="this.parentElement.remove()">×</span>`;
+
+    wrap.insertBefore(tag, inputEl);
+    inputEl.value = '';
   }
 
-  // progress
+  // ========= ADD CASE =========
+  function addCase() {
+    const list = document.getElementById('casesList');
+    if (!list) return;
+
+    const count = list.querySelectorAll('.case-item').length + 1;
+
+    const item = document.createElement('div');
+    item.className = 'case-item';
+    item.innerHTML = `
+      <span class="case-label">Case ${count}</span>
+      <input class="case-input" type="text" placeholder="Enter transfer scenario"/>
+      <button class="case-del" type="button" onclick="this.parentElement.remove()">×</button>
+    `;
+
+    list.appendChild(item);
+  }
+
+  // ========= PREVIEW =========
+  function previewSummary() {
+    let yesCount = 0, noCount = 0, unanswered = 0;
+
+    document.querySelectorAll('.yn').forEach(g => {
+      const sel = g.querySelector('.sel');
+      if (!sel) unanswered++;
+      else if (sel.classList.contains('y')) yesCount++;
+      else noCount++;
+    });
+
+    alert(
+      `Form Summary\n─────────────────\n✅ YES answers: ${yesCount}\n❌ NO answers: ${noCount}\n⚠️ Unanswered: ${unanswered}\n\nPlease answer all required fields before final submission.`
+    );
+  }
+
+  // ========= NORMALIZE =========
+  function normalizeKey(text, fallback) {
+    const cleaned = (text || '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '_')
+      .replace(/^_+|_+$/g, '')
+      .replace(/_+/g, '_');
+
+    return cleaned || fallback;
+  }
+
+  // ========= COLLECT FOLLOWUP =========
+  function collectFollowupData(block) {
+    const followup = block.querySelector('.followup');
+    if (!followup) return null;
+
+    const details = {};
+    let checkboxGroupIndex = 0;
+    let unlabeledIndex = 0;
+
+    // normal inputs/selects/textareas
+    followup.querySelectorAll('.fu-field').forEach(field => {
+      const labelText = field.querySelector('label')?.innerText?.trim() || '';
+
+      // checkboxes grouped in chips
+      const checkboxes = field.querySelectorAll('input[type="checkbox"]');
+      if (checkboxes.length) {
+        const key = normalizeKey(labelText, `checkbox_group_${++checkboxGroupIndex}`);
+        details[key] = [];
+
+        checkboxes.forEach(cb => {
+          if (cb.checked) {
+            const optionText = cb.closest('label')?.innerText?.trim() || cb.value || 'selected';
+            details[key].push(optionText);
+          }
+        });
+        return;
+      }
+
+      // regular inputs
+      const controls = field.querySelectorAll('input:not([type="checkbox"]):not([type="radio"]), select, textarea');
+      controls.forEach(control => {
+        const rawLabel =
+          labelText ||
+          control.getAttribute('placeholder') ||
+          control.name ||
+          `field_${++unlabeledIndex}`;
+
+        const key = normalizeKey(rawLabel, `field_${unlabeledIndex}`);
+        details[key] = control.value.trim();
+      });
+    });
+
+    // cases list
+    const caseInputs = followup.querySelectorAll('.case-input');
+    if (caseInputs.length) {
+      details.transfer_cases = [];
+      caseInputs.forEach(inp => {
+        const v = inp.value.trim();
+        if (v) details.transfer_cases.push(v);
+      });
+    }
+
+    // tag-wrap values
+    followup.querySelectorAll('.tag-wrap').forEach((wrap, idx) => {
+      const tags = [...wrap.querySelectorAll('.tag-item')].map(t =>
+        t.textContent.replace('×', '').trim()
+      ).filter(Boolean);
+
+      if (tags.length) {
+        let key = 'tags';
+        const field = wrap.closest('.fu-field');
+        const lbl = field?.querySelector('label')?.innerText?.trim();
+        if (lbl) key = normalizeKey(lbl, `tags_${idx + 1}`);
+        details[key] = tags;
+      }
+    });
+
+    return details;
+  }
+
+  // ========= PROGRESS =========
   function updateProgress() {
     const all = [...document.querySelectorAll('.yn')].length;
     const answered = [...document.querySelectorAll('.yn')].filter(g => g.querySelector('.sel')).length;
     const pct = all ? Math.round((answered / all) * 100) : 0;
-    document.getElementById('pfill').style.width = pct + '%';
-    document.getElementById('ppct').textContent = pct + '%';
+
+    document.getElementById('pbarFill').style.width = pct + '%';
+    document.getElementById('pbarPct').textContent = pct + '%';
 
     const sections = [
-      {id:'s1', dot:'dot1', yns: document.querySelectorAll('#s1 .yn')},
-      {id:'s2', dot:'dot2', yns: document.querySelectorAll('#s2 .yn')},
-      {id:'s3', dot:'dot3', yns: document.querySelectorAll('#s3 .yn')},
-      {id:'s4', dot:'dot4', yns: document.querySelectorAll('#s4 .yn')},
-      {id:'s5', dot:'dot5', yns: document.querySelectorAll('#s5 .yn')},
-      {id:'s6', dot:'dot6', yns: document.querySelectorAll('#s6 .yn')},
+      { dot: 'dot1', yns: document.querySelectorAll('#s1 .yn') },
+      { dot: 'dot2', yns: document.querySelectorAll('#s2 .yn') },
+      { dot: 'dot3', yns: document.querySelectorAll('#s3 .yn') },
+      { dot: 'dot4', yns: document.querySelectorAll('#s4 .yn') },
+      { dot: 'dot5', yns: document.querySelectorAll('#s5 .yn') },
+      { dot: 'dot6', yns: document.querySelectorAll('#s6 .yn') }
     ];
+
     sections.forEach(s => {
       const dot = document.getElementById(s.dot);
       let allDone = true;
-      s.yns.forEach(g => { if (!g.querySelector('.sel')) allDone = false; });
+      s.yns.forEach(g => {
+        if (!g.querySelector('.sel')) allDone = false;
+      });
+
       if (s.yns.length > 0 && allDone) dot.classList.add('done');
       else dot.classList.remove('done');
     });
   }
 
-  // Scroll spy
-  const sectionEls = ['s1','s2','s3','s4','s5','s6'].map(id => document.getElementById(id));
+  // ========= SCROLL SPY =========
+  const sectionEls = ['s1', 's2', 's3', 's4', 's5', 's6'].map(id => document.getElementById(id));
   const navLinks = document.querySelectorAll('.nav-item a');
+
   window.addEventListener('scroll', () => {
     let current = 0;
-    sectionEls.forEach((el, i) => { if (el && window.scrollY >= el.offsetTop - 180) current = i; });
+    sectionEls.forEach((el, i) => {
+      if (el && window.scrollY >= el.offsetTop - 180) current = i;
+    });
     navLinks.forEach((a, i) => a.classList.toggle('active', i === current));
   });
 
@@ -1978,73 +2118,41 @@ Step 5: First day briefing at hub..." style="min-height:100px"></textarea></div>
     a.addEventListener('click', e => {
       e.preventDefault();
       const t = document.querySelector(a.getAttribute('href'));
-      if (t) t.scrollIntoView({behavior:'smooth', block:'start'});
+      if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 
-  function previewSummary() {
-    let yesCount = 0, noCount = 0, unanswered = 0;
-    document.querySelectorAll('.yn').forEach(g => {
-      const sel = g.querySelector('.sel');
-      if (!sel) unanswered++;
-      else if (sel.classList.contains('y')) yesCount++;
-      else noCount++;
-    });
-    alert(`Form Summary\n─────────────────\n✅ YES answers: ${yesCount}\n❌ NO answers: ${noCount}\n⚠️ Unanswered: ${unanswered}\n\nPlease answer all required fields before final submission.`);
-  }
+  // ========= RESET =========
+  function resetAll() {
+    if (!confirm('Reset entire form? All data will be cleared.')) return;
 
-  function normalizeKey(text, fallback) {
-    const cleaned = (text || '')
-      .toLowerCase()
-      .replace(/[^a-z0-9]+/g, '_')
-      .replace(/^_+|_+$/g, '')
-      .replace(/_+/g, '_');
-    return cleaned || fallback;
-  }
+    document.querySelectorAll('.yn-btn').forEach(b => b.classList.remove('sel'));
+    document.querySelectorAll('.followup').forEach(f => f.classList.remove('open'));
 
-  function collectFollowupData(block) {
-    const followup = block.querySelector('.followup');
-    if (!followup) return null;
-
-    const inputs = followup.querySelectorAll('input, select, textarea');
-    if (!inputs.length) return null;
-
-    const details = {};
-    let checkboxGroupIndex = 0;
-    let unlabeledIndex = 0;
-
-    inputs.forEach((input) => {
-      if (input.type === 'checkbox') {
-        const groupWrap = input.closest('.chip-group') || input.closest('.fu-field') || followup;
-        if (!groupWrap.dataset.groupKey) {
-          const groupLabel = groupWrap.closest('.fu-field')?.querySelector('label')?.innerText?.trim() || `checkbox_group_${++checkboxGroupIndex}`;
-          groupWrap.dataset.groupKey = normalizeKey(groupLabel, `checkbox_group_${checkboxGroupIndex}`);
-        }
-        const groupKey = groupWrap.dataset.groupKey;
-        if (!details[groupKey]) details[groupKey] = [];
-        if (input.checked) {
-          const optionText = input.closest('label')?.innerText?.trim() || input.value || 'selected';
-          details[groupKey].push(optionText);
-        }
-        return;
-      }
-
-      const fieldWrap = input.closest('.fu-field');
-      const rawLabel = fieldWrap?.querySelector('label')?.innerText?.trim() || input.getAttribute('placeholder') || input.name || '';
-      const fieldKey = normalizeKey(rawLabel, `field_${++unlabeledIndex}`);
-      details[fieldKey] = input.value.trim();
+    document.querySelectorAll('.fu-field input, .fu-field textarea, .fu-field select, .case-input').forEach(el => {
+      if (el.type === 'checkbox' || el.type === 'radio') el.checked = false;
+      else el.value = '';
     });
 
-    return details;
+    document.querySelectorAll('.chip').forEach(c => {
+      c.classList.remove('on');
+      const input = c.querySelector('input');
+      if (input) input.checked = false;
+    });
+
+    document.querySelectorAll('.tag-item').forEach(t => t.remove());
+
+    updateProgress();
   }
 
-  async function submitForm() {
+  // ========= SUBMIT WITHOUT FETCH (NO CORS ISSUE) =========
+  function submitForm() {
     const unanswered = [...document.querySelectorAll('.yn')]
       .filter(g => !g.querySelector('.sel'));
 
     if (unanswered.length > 0) {
       const first = unanswered[0].closest('.q-block');
-      if (first) first.scrollIntoView({ behavior:'smooth', block:'center' });
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
       alert(`Please answer all questions before submitting.\n${unanswered.length} question(s) still unanswered.`);
       return;
     }
@@ -2058,64 +2166,40 @@ Step 5: First day briefing at hub..." style="min-height:100px"></textarea></div>
     document.querySelectorAll('.q-block').forEach((block, index) => {
       const key = block.dataset.q || `q${index + 1}`;
       const selectedBtn = block.querySelector('.yn .sel');
+
       payload[key] = selectedBtn ? selectedBtn.textContent.trim() : '';
 
       const questionText = block.querySelector('.q-text')?.textContent?.trim() || '';
       if (questionText) payload[`${key}_question`] = questionText;
 
       const details = collectFollowupData(block);
-      if (details && Object.keys(details).length) {
-        payload[`${key}_details`] = JSON.stringify(details);
-      } else {
-        payload[`${key}_details`] = '';
-      }
+      payload[`${key}_details`] = details && Object.keys(details).length
+        ? JSON.stringify(details)
+        : '';
     });
 
-    try {
-      const res = await fetch(SCRIPT_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'text/plain;charset=utf-8'
-        },
-        body: JSON.stringify(payload)
-      });
+    const form = document.getElementById('sheetPostForm');
+    const payloadInput = document.getElementById('payloadField');
 
-      const result = await res.json();
+    payloadInput.value = JSON.stringify(payload);
+    form.action = SCRIPT_URL;
 
-      if (result.success) {
-        document.getElementById('modalRef').textContent = 'Reference: ' + fid;
-        document.getElementById('successModal').classList.add('open');
-      } else {
-        alert(result.message || 'Submission failed');
-      }
-    } catch (error) {
-      console.error(error);
-      alert('Something went wrong while saving data.');
-    }
-  }
+    formSubmitDone = true;
+    form.submit();
 
-  function resetAll() {
-    if (!confirm('Reset entire form? All data will be cleared.')) return;
-    document.querySelectorAll('.yn-btn').forEach(b => b.classList.remove('sel'));
-    document.querySelectorAll('.followup').forEach(f => f.classList.remove('open'));
-    document.querySelectorAll('.fu-field input, .fu-field textarea, .fu-field select').forEach(el => {
-      if (el.type === 'checkbox' || el.type === 'radio') {
-        el.checked = false;
-      } else {
-        el.value = '';
-      }
-    });
-    document.querySelectorAll('.chip').forEach(c => {
-      c.classList.remove('on');
-      const input = c.querySelector('input');
-      if (input) input.checked = false;
-    });
-    document.querySelectorAll('.tag-item').forEach(t => t.remove());
-    updateProgress();
+    document.getElementById('modalRef').textContent = 'Reference: ' + fid;
+    document.getElementById('successModal').classList.add('open');
   }
 
   updateProgress();
-
 </script>
+
+<!-- Hidden form to avoid CORS -->
+<form id="sheetPostForm" method="POST" target="hidden_iframe" style="display:none;">
+  <input type="hidden" name="payload" id="payloadField">
+</form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
 </body>
 </html>
