@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>CABS Outbound Agent – Client Information Form</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,400&amp;display=swap" rel="stylesheet"/>
 <style>
 :root {
   --bg: #f5f4f0;
@@ -685,1270 +686,1204 @@ body {
 </style>
 </head>
 <body>
-
 <!-- ═══ HEADER ═══ -->
 <div class="header">
-  <div class="header-inner">
-    <div class="brand">
-      <div class="brand-mark">C</div>
-      <div>
-        <div class="brand-name">CABS</div>
-        <div class="brand-tagline">Outbound Agent Division</div>
-      </div>
-    </div>
-    <div class="header-meta">
-      <div class="form-badge">Form ID: <span id="fid">—</span></div>
-      <div class="form-badge">Date: <span id="fdate">—</span></div>
-    </div>
-  </div>
+<div class="header-inner">
+<div class="brand">
+<div class="brand-mark">C</div>
+<div>
+<div class="brand-name">CABS</div>
+<div class="brand-tagline">Outbound Agent Division</div>
 </div>
-
+</div>
+<div class="header-meta">
+<div class="form-badge">Form ID: <span id="fid">—</span></div>
+<div class="form-badge">Date: <span id="fdate">—</span></div>
+</div>
+</div>
+</div>
 <!-- PROGRESS -->
 <div class="progress-bar-wrap">
-  <div class="pbar-label">Section Progress</div>
-  <div class="pbar-track"><div class="pbar-fill" id="pbarFill"></div></div>
-  <div class="pbar-pct" id="pbarPct">0%</div>
+<div class="pbar-label">Section Progress</div>
+<div class="pbar-track"><div class="pbar-fill" id="pbarFill"></div></div>
+<div class="pbar-pct" id="pbarPct">0%</div>
 </div>
-
 <!-- ═══ LAYOUT ═══ -->
 <div class="layout">
-
-  <!-- SIDEBAR -->
-  <nav class="sidebar">
-    <ul class="nav-list">
-      <li class="nav-item"><a href="#s1" class="active">
-        <span class="nav-icon">🧑</span> Driver Profile
+<!-- SIDEBAR -->
+<nav class="sidebar">
+<ul class="nav-list">
+<li class="nav-item"><a class="active" href="#s1">
+<span class="nav-icon">🧑</span> Driver Profile
         <span class="nav-num">8</span>
-        <span class="nav-dot" id="dot1"></span>
-      </a></li>
-      <li class="nav-item"><a href="#s2">
-        <span class="nav-icon">🚗</span> Vehicle Profile
+<span class="nav-dot" id="dot1"></span>
+</a></li>
+<li class="nav-item"><a href="#s2">
+<span class="nav-icon">🚗</span> Vehicle Profile
         <span class="nav-num">10</span>
-        <span class="nav-dot" id="dot2"></span>
-      </a></li>
-      <li class="nav-item"><a href="#s3">
-        <span class="nav-icon">🏢</span> Hub Details
+<span class="nav-dot" id="dot2"></span>
+</a></li>
+<li class="nav-item"><a href="#s3">
+<span class="nav-icon">🏢</span> Hub Details
         <span class="nav-num">7</span>
-        <span class="nav-dot" id="dot3"></span>
-      </a></li>
-      <li class="nav-item"><a href="#s4">
-        <span class="nav-icon">📋</span> Car & Allocation
+<span class="nav-dot" id="dot3"></span>
+</a></li>
+<li class="nav-item"><a href="#s4">
+<span class="nav-icon">📋</span> Car &amp; Allocation
         <span class="nav-num">10</span>
-        <span class="nav-dot" id="dot4"></span>
-      </a></li>
-      <li class="nav-item"><a href="#s5">
-        <span class="nav-icon">🔄</span> Onboarding
+<span class="nav-dot" id="dot4"></span>
+</a></li>
+<li class="nav-item"><a href="#s5">
+<span class="nav-icon">🔄</span> Onboarding
         <span class="nav-num">10</span>
-        <span class="nav-dot" id="dot5"></span>
-      </a></li>
-      <li class="nav-item"><a href="#s6">
-        <span class="nav-icon">🎧</span> Agent Details
+<span class="nav-dot" id="dot5"></span>
+</a></li>
+<li class="nav-item"><a href="#s6">
+<span class="nav-icon">🎧</span> Agent Details
         <span class="nav-num">7</span>
-        <span class="nav-dot" id="dot6"></span>
-      </a></li>
-    </ul>
-  </nav>
-
-  <!-- MAIN -->
-  <main class="main">
-  <form id="mainForm">
-
-    <!-- ══════════════════════════════════
+<span class="nav-dot" id="dot6"></span>
+</a></li>
+</ul>
+</nav>
+<!-- MAIN -->
+<main class="main">
+<form id="mainForm">
+<!-- ══════════════════════════════════
          SECTION 1 – DRIVER PROFILE
     ══════════════════════════════════ -->
-    <div class="form-section" id="s1">
-      <div class="sec-header">
-        <div class="sec-num c1">1</div>
-        <div class="sec-info">
-          <div class="sec-title">Driver Profile</div>
-          <div class="sec-desc">Eligibility, background, license & expectations</div>
-        </div>
-        <div class="sec-tag">CLIENT FILL</div>
-      </div>
-      <div class="sec-body">
-
-        <!-- Age -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">1.1 · REQUIRED</span>
-              <span class="q-text">Age Requirement — Is there a minimum/maximum age limit for drivers?</span>
-              <span class="q-sub">Age eligibility criteria for driver hiring</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-age')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-age')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-age">
-            <div class="followup-label">Provide Age Details for Agent</div>
-            <div class="fu-row">
-              <div class="fu-field"><label>Minimum Age (years)</label><input type="number" min="18" max="60" placeholder="e.g. 21"></div>
-              <div class="fu-field"><label>Maximum Age (years)</label><input type="number" min="20" max="70" placeholder="e.g. 55"></div>
-            </div>
-            <div class="fu-field"><label>Any exceptions or notes on age criteria</label><textarea placeholder="e.g. Above 50 considered only with 10+ yrs experience..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Salary Structure -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">1.2 · REQUIRED</span>
-              <span class="q-text">Salary Structure — Is there a defined salary structure for drivers?</span>
-              <span class="q-sub">Payout type, amounts and breakdown</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-sal')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-sal')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-sal">
-            <div class="followup-label">Salary Structure Details for Agent</div>
-            <div class="fu-field">
-              <label>Salary Type</label>
-              <select><option value="">— Select —</option><option>Fixed Monthly</option><option>Fixed + Incentive</option><option>Per Trip Commission</option><option>Weekly Payout</option><option>Daily Settlement</option></select>
-            </div>
-            <div class="fu-row">
-              <div class="fu-field"><label>Base Salary Amount (₹)</label><input type="number" placeholder="e.g. 18000"></div>
-              <div class="fu-field"><label>Incentive / Variable (₹)</label><input type="number" placeholder="e.g. 3000"></div>
-            </div>
-            <div class="fu-field"><label>Additional salary notes for agent to communicate</label><textarea placeholder="e.g. Salary includes fuel allowance, HRA not included..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Experience -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">1.3 · REQUIRED</span>
-              <span class="q-text">Total Driving Experience — Is minimum experience mandatory?</span>
-              <span class="q-sub">Years of commercial / personal driving experience required</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-exp')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-exp')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-exp">
-            <div class="followup-label">Experience Criteria for Agent</div>
-            <div class="fu-row">
-              <div class="fu-field"><label>Minimum Years of Experience</label><input type="number" min="0" placeholder="e.g. 2"></div>
-              <div class="fu-field"><label>Experience Type Required</label>
-                <select><option value="">— Select —</option><option>Commercial (Cab/Taxi)</option><option>Personal Vehicle</option><option>Both Acceptable</option></select>
-              </div>
-            </div>
-            <div class="fu-field"><label>Script note for agent to communicate experience requirement</label><textarea placeholder="e.g. Must have at least 2 years of app-based or commercial cab experience..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Past Employers -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">1.4 · REQUIRED</span>
-              <span class="q-text">Past Employers — Is verification of past employment required?</span>
-              <span class="q-sub">Reference check, employment history</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-emp')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-emp')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-emp">
-            <div class="followup-label">Past Employer Verification Details</div>
-            <div class="fu-field"><label>How many past employers to verify?</label>
-              <select><option>1</option><option>2</option><option>3</option><option>Any/All available</option></select>
-            </div>
-            <div class="fu-field"><label>Documents required from past employer</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Experience Letter</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Salary Slip</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Reference Contact</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Offer/Relieving Letter</label>
-              </div>
-            </div>
-            <div class="fu-field"><label>Agent note on past employer communication</label><textarea placeholder="e.g. Ask driver to share contact of previous employer for background verification..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Preferred Vehicle Type -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">1.5 · REQUIRED</span>
-              <span class="q-text">Preferred Vehicle Type — Is driver vehicle type preference captured?</span>
-              <span class="q-sub">What category of vehicle driver prefers to operate</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-vtype')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-vtype')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-vtype">
-            <div class="followup-label">Vehicle Type Options to Present to Driver</div>
-            <div class="fu-field"><label>Available vehicle types (check all that apply)</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Hatchback</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Sedan</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> SUV</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> MUV / Van</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Electric (EV)</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Luxury</label>
-              </div>
-            </div>
-            <div class="fu-field"><label>Agent instructions on vehicle preference discussion</label><textarea placeholder="e.g. Inform driver we currently have Sedan and EV options available in their city..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Expectations from Role -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">1.6 · OPTIONAL</span>
-              <span class="q-text">Role Expectations — Are there specific expectations to communicate to the driver?</span>
-              <span class="q-sub">Conduct, punctuality, uniform, behaviour standards</span>
-            </div>
-            <span class="req o">OPTIONAL</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-expect')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-expect')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-expect">
-            <div class="followup-label">Role Expectations — Agent Script Points</div>
-            <div class="fu-field"><label>Key expectations to communicate (agent talking points)</label>
-              <textarea placeholder="e.g. Must wear uniform, must maintain 4.5+ rating, no cancellations after acceptance, phone usage restricted while driving..."></textarea>
-            </div>
-          </div>
-        </div>
-
-        <!-- Legal Cases -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">1.7 · REQUIRED</span>
-              <span class="q-text">Legal Cases — Are drivers with active or past legal cases considered?</span>
-              <span class="q-sub">Police verification, FIR history, criminal background</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-legal')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-legal')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-legal">
-            <div class="followup-label">Legal Case Policy for Agent</div>
-            <div class="fu-field"><label>Which case types are considered acceptable (if any)?</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Minor Traffic Violations</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Old Challan (paid)</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Case Acquitted</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> None — Zero tolerance</label>
-              </div>
-            </div>
-            <div class="fu-field"><label>Agent script for legal case enquiry</label>
-              <textarea placeholder="e.g. Ask driver: Do you have any pending FIR or active court case? If yes, provide details. We will do a background check before joining..."></textarea>
-            </div>
-          </div>
-        </div>
-
-        <!-- DL Expiry -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">1.8 · REQUIRED</span>
-              <span class="q-text">Driving Licence Expiry — Is DL validity a qualifying criterion?</span>
-              <span class="q-sub">Minimum DL validity, commercial badge requirement</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-dl')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-dl')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-dl">
-            <div class="followup-label">DL Validity Policy for Agent</div>
-            <div class="fu-row">
-              <div class="fu-field"><label>Minimum DL validity remaining (months)</label><input type="number" placeholder="e.g. 6"></div>
-              <div class="fu-field"><label>Commercial (Badge) Licence required?</label>
-                <select><option>Yes — mandatory</option><option>No — regular DL accepted</option><option>Preferred but not mandatory</option></select>
-              </div>
-            </div>
-            <div class="fu-field"><label>Agent script note for DL verification</label>
-              <textarea placeholder="e.g. Ask driver to share DL photo. Inform them we require at least 6 months validity. If expired, advise renewal before joining..."></textarea>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /sec-body -->
-    </div><!-- /section 1 -->
-
-
-    <!-- ══════════════════════════════════
+<div class="form-section" id="s1">
+<div class="sec-header">
+<div class="sec-num c1">1</div>
+<div class="sec-info">
+<div class="sec-title">Driver Profile</div>
+<div class="sec-desc">Eligibility, background, license &amp; expectations</div>
+</div>
+<div class="sec-tag">CLIENT FILL</div>
+</div>
+<div class="sec-body">
+<!-- Age -->
+<div class="q-block" data-q="age_requirement_is_there_a_minimum_maximum_age_limit_for_drivers">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">1.1 · REQUIRED</span>
+<span class="q-text">Age Requirement — Is there a minimum/maximum age limit for drivers?</span>
+<span class="q-sub">Age eligibility criteria for driver hiring</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-age')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-age')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-age">
+<div class="followup-label">Provide Age Details for Agent</div>
+<div class="fu-row">
+<div class="fu-field"><label>Minimum Age (years)</label><input max="60" min="18" placeholder="e.g. 21" type="number"/></div>
+<div class="fu-field"><label>Maximum Age (years)</label><input max="70" min="20" placeholder="e.g. 55" type="number"/></div>
+</div>
+<div class="fu-field"><label>Any exceptions or notes on age criteria</label><textarea placeholder="e.g. Above 50 considered only with 10+ yrs experience..."></textarea></div>
+</div>
+</div>
+<!-- Salary Structure -->
+<div class="q-block" data-q="salary_structure_is_there_a_defined_salary_structure_for_drivers">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">1.2 · REQUIRED</span>
+<span class="q-text">Salary Structure — Is there a defined salary structure for drivers?</span>
+<span class="q-sub">Payout type, amounts and breakdown</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-sal')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-sal')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-sal">
+<div class="followup-label">Salary Structure Details for Agent</div>
+<div class="fu-field">
+<label>Salary Type</label>
+<select><option value="">— Select —</option><option>Fixed Monthly</option><option>Fixed + Incentive</option><option>Per Trip Commission</option><option>Weekly Payout</option><option>Daily Settlement</option></select>
+</div>
+<div class="fu-row">
+<div class="fu-field"><label>Base Salary Amount (₹)</label><input placeholder="e.g. 18000" type="number"/></div>
+<div class="fu-field"><label>Incentive / Variable (₹)</label><input placeholder="e.g. 3000" type="number"/></div>
+</div>
+<div class="fu-field"><label>Additional salary notes for agent to communicate</label><textarea placeholder="e.g. Salary includes fuel allowance, HRA not included..."></textarea></div>
+</div>
+</div>
+<!-- Experience -->
+<div class="q-block" data-q="total_driving_experience_is_minimum_experience_mandatory">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">1.3 · REQUIRED</span>
+<span class="q-text">Total Driving Experience — Is minimum experience mandatory?</span>
+<span class="q-sub">Years of commercial / personal driving experience required</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-exp')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-exp')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-exp">
+<div class="followup-label">Experience Criteria for Agent</div>
+<div class="fu-row">
+<div class="fu-field"><label>Minimum Years of Experience</label><input min="0" placeholder="e.g. 2" type="number"/></div>
+<div class="fu-field"><label>Experience Type Required</label>
+<select><option value="">— Select —</option><option>Commercial (Cab/Taxi)</option><option>Personal Vehicle</option><option>Both Acceptable</option></select>
+</div>
+</div>
+<div class="fu-field"><label>Script note for agent to communicate experience requirement</label><textarea placeholder="e.g. Must have at least 2 years of app-based or commercial cab experience..."></textarea></div>
+</div>
+</div>
+<!-- Past Employers -->
+<div class="q-block" data-q="past_employers_is_verification_of_past_employment_required">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">1.4 · REQUIRED</span>
+<span class="q-text">Past Employers — Is verification of past employment required?</span>
+<span class="q-sub">Reference check, employment history</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-emp')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-emp')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-emp">
+<div class="followup-label">Past Employer Verification Details</div>
+<div class="fu-field"><label>How many past employers to verify?</label>
+<select><option>1</option><option>2</option><option>3</option><option>Any/All available</option></select>
+</div>
+<div class="fu-field"><label>Documents required from past employer</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Experience Letter</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Salary Slip</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Reference Contact</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Offer/Relieving Letter</label>
+</div>
+</div>
+<div class="fu-field"><label>Agent note on past employer communication</label><textarea placeholder="e.g. Ask driver to share contact of previous employer for background verification..."></textarea></div>
+</div>
+</div>
+<!-- Preferred Vehicle Type -->
+<div class="q-block" data-q="preferred_vehicle_type_is_driver_vehicle_type_preference_captured">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">1.5 · REQUIRED</span>
+<span class="q-text">Preferred Vehicle Type — Is driver vehicle type preference captured?</span>
+<span class="q-sub">What category of vehicle driver prefers to operate</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-vtype')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-vtype')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-vtype">
+<div class="followup-label">Vehicle Type Options to Present to Driver</div>
+<div class="fu-field"><label>Available vehicle types (check all that apply)</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Hatchback</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Sedan</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> SUV</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> MUV / Van</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Electric (EV)</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Luxury</label>
+</div>
+</div>
+<div class="fu-field"><label>Agent instructions on vehicle preference discussion</label><textarea placeholder="e.g. Inform driver we currently have Sedan and EV options available in their city..."></textarea></div>
+</div>
+</div>
+<!-- Expectations from Role -->
+<div class="q-block" data-q="role_expectations_are_there_specific_expectations_to_communicate_to_the_driver">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">1.6 · OPTIONAL</span>
+<span class="q-text">Role Expectations — Are there specific expectations to communicate to the driver?</span>
+<span class="q-sub">Conduct, punctuality, uniform, behaviour standards</span>
+</div>
+<span class="req o">OPTIONAL</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-expect')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-expect')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-expect">
+<div class="followup-label">Role Expectations — Agent Script Points</div>
+<div class="fu-field"><label>Key expectations to communicate (agent talking points)</label>
+<textarea placeholder="e.g. Must wear uniform, must maintain 4.5+ rating, no cancellations after acceptance, phone usage restricted while driving..."></textarea>
+</div>
+</div>
+</div>
+<!-- Legal Cases -->
+<div class="q-block" data-q="legal_cases_are_drivers_with_active_or_past_legal_cases_considered">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">1.7 · REQUIRED</span>
+<span class="q-text">Legal Cases — Are drivers with active or past legal cases considered?</span>
+<span class="q-sub">Police verification, FIR history, criminal background</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-legal')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-legal')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-legal">
+<div class="followup-label">Legal Case Policy for Agent</div>
+<div class="fu-field"><label>Which case types are considered acceptable (if any)?</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Minor Traffic Violations</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Old Challan (paid)</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Case Acquitted</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> None — Zero tolerance</label>
+</div>
+</div>
+<div class="fu-field"><label>Agent script for legal case enquiry</label>
+<textarea placeholder="e.g. Ask driver: Do you have any pending FIR or active court case? If yes, provide details. We will do a background check before joining..."></textarea>
+</div>
+</div>
+</div>
+<!-- DL Expiry -->
+<div class="q-block" data-q="driving_licence_expiry_is_dl_validity_a_qualifying_criterion">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">1.8 · REQUIRED</span>
+<span class="q-text">Driving Licence Expiry — Is DL validity a qualifying criterion?</span>
+<span class="q-sub">Minimum DL validity, commercial badge requirement</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-dl')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-dl')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-dl">
+<div class="followup-label">DL Validity Policy for Agent</div>
+<div class="fu-row">
+<div class="fu-field"><label>Minimum DL validity remaining (months)</label><input placeholder="e.g. 6" type="number"/></div>
+<div class="fu-field"><label>Commercial (Badge) Licence required?</label>
+<select><option>Yes — mandatory</option><option>No — regular DL accepted</option><option>Preferred but not mandatory</option></select>
+</div>
+</div>
+<div class="fu-field"><label>Agent script note for DL verification</label>
+<textarea placeholder="e.g. Ask driver to share DL photo. Inform them we require at least 6 months validity. If expired, advise renewal before joining..."></textarea>
+</div>
+</div>
+</div>
+</div><!-- /sec-body -->
+</div><!-- /section 1 -->
+<!-- ══════════════════════════════════
          SECTION 2 – VEHICLE PROFILE
     ══════════════════════════════════ -->
-    <div class="form-section" id="s2">
-      <div class="sec-header">
-        <div class="sec-num c2">2</div>
-        <div class="sec-info">
-          <div class="sec-title">Vehicle Profile</div>
-          <div class="sec-desc">Fleet specifications, fuel, EV policy & cost responsibility</div>
-        </div>
-        <div class="sec-tag">CLIENT FILL</div>
-      </div>
-      <div class="sec-body">
-
-        <!-- Fuel Type -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">2.1 · REQUIRED</span>
-              <span class="q-text">Fuel Type — Is the fleet fuel type defined?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-fuel')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-fuel')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-fuel">
-            <div class="followup-label">Fuel Type Details for Agent</div>
-            <div class="fu-field"><label>Fleet fuel types (select all)</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Petrol</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Diesel</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> CNG</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Electric (EV)</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Hybrid</label>
-              </div>
-            </div>
-            <div class="fu-field"><label>Agent communication note on fuel type</label><textarea placeholder="e.g. We operate a mixed fleet. Driver will be assigned based on city availability..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Car Manufacturer & Model -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">2.2 · REQUIRED</span>
-              <span class="q-text">Car Manufacturer & Model — Are specific car brands/models defined?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-car')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-car')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-car">
-            <div class="followup-label">Fleet Models — Information for Agent</div>
-            <div class="fu-field"><label>Car brands in fleet (press Enter to add)</label>
-              <div class="tag-wrap" id="tw-brands"><input class="tag-input-bare" placeholder="e.g. Maruti, Tata, Hyundai…" onkeydown="addTag(event,this)"></div>
-            </div>
-            <div class="fu-field"><label>Specific models / variants</label><textarea placeholder="e.g. Maruti WagonR CNG, Tata Nexon EV, Hyundai Aura Diesel..."></textarea></div>
-            <div class="fu-field"><label>Agent note to communicate to driver about car models</label><textarea placeholder="e.g. You will be given a Maruti WagonR CNG. Car is well-maintained and under 3 years old..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Mileage -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">2.3 · OPTIONAL</span>
-              <span class="q-text">Mileage — Is vehicle mileage information to be shared with driver?</span>
-            </div>
-            <span class="req o">OPTIONAL</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-mileage')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-mileage')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-mileage">
-            <div class="followup-label">Mileage Data for Agent</div>
-            <div class="fu-row">
-              <div class="fu-field"><label>Average Mileage (km/l or km/charge)</label><input type="text" placeholder="e.g. 18 km/l"></div>
-              <div class="fu-field"><label>Driving Range per Tank / Charge (km)</label><input type="number" placeholder="e.g. 350"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- EV Charging Policy -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">2.4 · CONDITIONAL</span>
-              <span class="q-text">EV Charging Policy — Is there an EV-specific charging policy?</span>
-              <span class="q-sub">Applicable only if EV vehicles in fleet</span>
-            </div>
-            <span class="req o">IF EV</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-ev')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-ev')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-ev">
-            <div class="followup-label">EV Charging Policy for Agent</div>
-            <div class="fu-field"><label>Who bears EV charging cost?</label>
-              <select><option value="">— Select —</option><option>Company — Full</option><option>Driver — Full</option><option>Split (specify below)</option><option>Deducted from earnings</option></select>
-            </div>
-            <div class="fu-row">
-              <div class="fu-field"><label>Charging location / station type</label>
-                <select><option>At Hub (provided)</option><option>Any public charger</option><option>Specific network only</option></select>
-              </div>
-              <div class="fu-field"><label>Avg. charge time per session (hours)</label><input type="number" placeholder="e.g. 4"></div>
-            </div>
-            <div class="fu-field"><label>EV policy script for agent to tell driver</label><textarea placeholder="e.g. EV charging is done at hub. You must return car with min 30% charge. Charging cost is borne by company..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Seating Capacity -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">2.5 · REQUIRED</span>
-              <span class="q-text">Seating Capacity — Is the vehicle seating capacity defined?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-seat')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-seat')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-seat">
-            <div class="followup-label">Seating Capacity Detail</div>
-            <div class="fu-field"><label>Standard seating configuration</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> 4+1 (Standard)</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> 6+1 (MUV)</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> 7+1</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Mixed Fleet</label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- AC Availability -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">2.6 · REQUIRED</span>
-              <span class="q-text">AC Availability — Are all fleet vehicles equipped with AC?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-ac')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-ac')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-ac">
-            <div class="followup-label">AC Policy Note for Agent</div>
-            <div class="fu-field"><label>AC note to communicate to driver / customer</label><textarea placeholder="e.g. All our vehicles are fully AC equipped. In case of AC malfunction, driver should report to hub immediately..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Vehicle Pick & Drop -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">2.7 · REQUIRED</span>
-              <span class="q-text">Vehicle Pick & Drop — Is there a defined pick-up/drop responsibility?</span>
-              <span class="q-sub">Who picks up and drops off the vehicle at hub</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-pd')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-pd')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-pd">
-            <div class="followup-label">Pick & Drop Responsibility for Agent</div>
-            <div class="fu-field"><label>Vehicle pick-up/drop responsibility</label>
-              <select><option>Driver picks up from Hub, drops back to Hub</option><option>Company delivers to driver location</option><option>Shared responsibility</option></select>
-            </div>
-            <div class="fu-field"><label>Instructions for agent to tell driver</label><textarea placeholder="e.g. Driver must report to hub by 6 AM to collect vehicle and return by 10 PM..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Fuel Cost Responsibility -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">2.8 · REQUIRED</span>
-              <span class="q-text">Fuel Cost Responsibility — Who bears the fuel cost?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-fuelcost')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-fuelcost')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-fuelcost">
-            <div class="followup-label">Fuel Cost Policy for Agent</div>
-            <div class="fu-field"><label>Fuel cost borne by</label>
-              <select><option>Company — Full</option><option>Driver — Full</option><option>Split (specify below)</option><option>Deducted from trip earnings</option><option>Fuel card provided by company</option></select>
-            </div>
-            <div class="fu-field"><label>Fuel policy script for agent</label><textarea placeholder="e.g. Company provides a fuel card. Driver must refuel only at authorised pumps. Max ₹500/day allowed on card..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Vehicle Allocation Model -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">2.9 · REQUIRED</span>
-              <span class="q-text">Vehicle Allocation Model — Is the model of vehicle allocation defined?</span>
-              <span class="q-sub">Rental, Lease, Company-owned, Driver-owned, etc.</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-valloc')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-valloc')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-valloc">
-            <div class="followup-label">Allocation Model Details for Agent</div>
-            <div class="fu-field"><label>Vehicle allocation model</label>
-              <select><option>Subscription / Rental from Company</option><option>Company-owned — No rental</option><option>Driver-owned — Works on own car</option><option>Lease-to-own</option><option>Partner fleet rental</option></select>
-            </div>
-            <div class="fu-field"><label>Agent script on vehicle model to explain to driver</label><textarea placeholder="e.g. The car will be rented to you at ₹800/day. You keep 100% of your earnings minus the rent..."></textarea></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-    <!-- ══════════════════════════════════
+<div class="form-section" id="s2">
+<div class="sec-header">
+<div class="sec-num c2">2</div>
+<div class="sec-info">
+<div class="sec-title">Vehicle Profile</div>
+<div class="sec-desc">Fleet specifications, fuel, EV policy &amp; cost responsibility</div>
+</div>
+<div class="sec-tag">CLIENT FILL</div>
+</div>
+<div class="sec-body">
+<!-- Fuel Type -->
+<div class="q-block" data-q="fuel_type_is_the_fleet_fuel_type_defined">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">2.1 · REQUIRED</span>
+<span class="q-text">Fuel Type — Is the fleet fuel type defined?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-fuel')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-fuel')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-fuel">
+<div class="followup-label">Fuel Type Details for Agent</div>
+<div class="fu-field"><label>Fleet fuel types (select all)</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Petrol</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Diesel</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> CNG</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Electric (EV)</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Hybrid</label>
+</div>
+</div>
+<div class="fu-field"><label>Agent communication note on fuel type</label><textarea placeholder="e.g. We operate a mixed fleet. Driver will be assigned based on city availability..."></textarea></div>
+</div>
+</div>
+<!-- Car Manufacturer & Model -->
+<div class="q-block" data-q="car_manufacturer_model_are_specific_car_brands_models_defined">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">2.2 · REQUIRED</span>
+<span class="q-text">Car Manufacturer &amp; Model — Are specific car brands/models defined?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-car')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-car')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-car">
+<div class="followup-label">Fleet Models — Information for Agent</div>
+<div class="fu-field"><label>Car brands in fleet (press Enter to add)</label>
+<div class="tag-wrap" id="tw-brands"><input class="tag-input-bare" onkeydown="addTag(event,this)" placeholder="e.g. Maruti, Tata, Hyundai…"/></div>
+</div>
+<div class="fu-field"><label>Specific models / variants</label><textarea placeholder="e.g. Maruti WagonR CNG, Tata Nexon EV, Hyundai Aura Diesel..."></textarea></div>
+<div class="fu-field"><label>Agent note to communicate to driver about car models</label><textarea placeholder="e.g. You will be given a Maruti WagonR CNG. Car is well-maintained and under 3 years old..."></textarea></div>
+</div>
+</div>
+<!-- Mileage -->
+<div class="q-block" data-q="mileage_is_vehicle_mileage_information_to_be_shared_with_driver">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">2.3 · OPTIONAL</span>
+<span class="q-text">Mileage — Is vehicle mileage information to be shared with driver?</span>
+</div>
+<span class="req o">OPTIONAL</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-mileage')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-mileage')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-mileage">
+<div class="followup-label">Mileage Data for Agent</div>
+<div class="fu-row">
+<div class="fu-field"><label>Average Mileage (km/l or km/charge)</label><input placeholder="e.g. 18 km/l" type="text"/></div>
+<div class="fu-field"><label>Driving Range per Tank / Charge (km)</label><input placeholder="e.g. 350" type="number"/></div>
+</div>
+</div>
+</div>
+<!-- EV Charging Policy -->
+<div class="q-block" data-q="ev_charging_policy_is_there_an_ev_specific_charging_policy">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">2.4 · CONDITIONAL</span>
+<span class="q-text">EV Charging Policy — Is there an EV-specific charging policy?</span>
+<span class="q-sub">Applicable only if EV vehicles in fleet</span>
+</div>
+<span class="req o">IF EV</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-ev')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-ev')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-ev">
+<div class="followup-label">EV Charging Policy for Agent</div>
+<div class="fu-field"><label>Who bears EV charging cost?</label>
+<select><option value="">— Select —</option><option>Company — Full</option><option>Driver — Full</option><option>Split (specify below)</option><option>Deducted from earnings</option></select>
+</div>
+<div class="fu-row">
+<div class="fu-field"><label>Charging location / station type</label>
+<select><option>At Hub (provided)</option><option>Any public charger</option><option>Specific network only</option></select>
+</div>
+<div class="fu-field"><label>Avg. charge time per session (hours)</label><input placeholder="e.g. 4" type="number"/></div>
+</div>
+<div class="fu-field"><label>EV policy script for agent to tell driver</label><textarea placeholder="e.g. EV charging is done at hub. You must return car with min 30% charge. Charging cost is borne by company..."></textarea></div>
+</div>
+</div>
+<!-- Seating Capacity -->
+<div class="q-block" data-q="seating_capacity_is_the_vehicle_seating_capacity_defined">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">2.5 · REQUIRED</span>
+<span class="q-text">Seating Capacity — Is the vehicle seating capacity defined?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-seat')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-seat')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-seat">
+<div class="followup-label">Seating Capacity Detail</div>
+<div class="fu-field"><label>Standard seating configuration</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> 4+1 (Standard)</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> 6+1 (MUV)</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> 7+1</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Mixed Fleet</label>
+</div>
+</div>
+</div>
+</div>
+<!-- AC Availability -->
+<div class="q-block" data-q="ac_availability_are_all_fleet_vehicles_equipped_with_ac">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">2.6 · REQUIRED</span>
+<span class="q-text">AC Availability — Are all fleet vehicles equipped with AC?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-ac')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-ac')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-ac">
+<div class="followup-label">AC Policy Note for Agent</div>
+<div class="fu-field"><label>AC note to communicate to driver / customer</label><textarea placeholder="e.g. All our vehicles are fully AC equipped. In case of AC malfunction, driver should report to hub immediately..."></textarea></div>
+</div>
+</div>
+<!-- Vehicle Pick & Drop -->
+<div class="q-block" data-q="vehicle_pick_drop_is_there_a_defined_pick_up_drop_responsibility">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">2.7 · REQUIRED</span>
+<span class="q-text">Vehicle Pick &amp; Drop — Is there a defined pick-up/drop responsibility?</span>
+<span class="q-sub">Who picks up and drops off the vehicle at hub</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-pd')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-pd')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-pd">
+<div class="followup-label">Pick &amp; Drop Responsibility for Agent</div>
+<div class="fu-field"><label>Vehicle pick-up/drop responsibility</label>
+<select><option>Driver picks up from Hub, drops back to Hub</option><option>Company delivers to driver location</option><option>Shared responsibility</option></select>
+</div>
+<div class="fu-field"><label>Instructions for agent to tell driver</label><textarea placeholder="e.g. Driver must report to hub by 6 AM to collect vehicle and return by 10 PM..."></textarea></div>
+</div>
+</div>
+<!-- Fuel Cost Responsibility -->
+<div class="q-block" data-q="fuel_cost_responsibility_who_bears_the_fuel_cost">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">2.8 · REQUIRED</span>
+<span class="q-text">Fuel Cost Responsibility — Who bears the fuel cost?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-fuelcost')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-fuelcost')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-fuelcost">
+<div class="followup-label">Fuel Cost Policy for Agent</div>
+<div class="fu-field"><label>Fuel cost borne by</label>
+<select><option>Company — Full</option><option>Driver — Full</option><option>Split (specify below)</option><option>Deducted from trip earnings</option><option>Fuel card provided by company</option></select>
+</div>
+<div class="fu-field"><label>Fuel policy script for agent</label><textarea placeholder="e.g. Company provides a fuel card. Driver must refuel only at authorised pumps. Max ₹500/day allowed on card..."></textarea></div>
+</div>
+</div>
+<!-- Vehicle Allocation Model -->
+<div class="q-block" data-q="vehicle_allocation_model_is_the_model_of_vehicle_allocation_defined">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">2.9 · REQUIRED</span>
+<span class="q-text">Vehicle Allocation Model — Is the model of vehicle allocation defined?</span>
+<span class="q-sub">Rental, Lease, Company-owned, Driver-owned, etc.</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-valloc')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-valloc')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-valloc">
+<div class="followup-label">Allocation Model Details for Agent</div>
+<div class="fu-field"><label>Vehicle allocation model</label>
+<select><option>Subscription / Rental from Company</option><option>Company-owned — No rental</option><option>Driver-owned — Works on own car</option><option>Lease-to-own</option><option>Partner fleet rental</option></select>
+</div>
+<div class="fu-field"><label>Agent script on vehicle model to explain to driver</label><textarea placeholder="e.g. The car will be rented to you at ₹800/day. You keep 100% of your earnings minus the rent..."></textarea></div>
+</div>
+</div>
+</div>
+</div>
+<!-- ══════════════════════════════════
          SECTION 3 – HUB DETAILS
     ══════════════════════════════════ -->
-    <div class="form-section" id="s3">
-      <div class="sec-header">
-        <div class="sec-num c3">3</div>
-        <div class="sec-info">
-          <div class="sec-title">Hub Details</div>
-          <div class="sec-desc">Locations, services, EV charging, timings & point of contact</div>
-        </div>
-        <div class="sec-tag">CLIENT FILL</div>
-      </div>
-      <div class="sec-body">
-
-        <!-- Hub Locations -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">3.1 · REQUIRED</span>
-              <span class="q-text">Hub Locations — Are hub locations defined to inform drivers?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-hubloc')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-hubloc')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-hubloc">
-            <div class="followup-label">Hub Location Details for Agent</div>
-            <div class="fu-field"><label>Hub city / area names (press Enter to add)</label>
-              <div class="tag-wrap" id="tw-hubs"><input class="tag-input-bare" placeholder="e.g. Hyderabad — Gachibowli…" onkeydown="addTag(event,this)"></div>
-            </div>
-            <div class="fu-field"><label>Full address / landmark details for agent reference</label><textarea placeholder="e.g. Hub 1: Plot 42, Gachibowli, Opp. DLF, Contact: 9876543210&#10;Hub 2: ..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Services at Hub -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">3.2 · REQUIRED</span>
-              <span class="q-text">Hub Services — Are specific services available at the hub?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-hubsvc')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-hubsvc')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-hubsvc">
-            <div class="followup-label">Available Hub Services — For Agent Reference</div>
-            <div class="fu-field"><label>Services available (select all)</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Vehicle Handover</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Fueling</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> EV Charging</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Servicing / Maintenance</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Driver Onboarding Desk</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Document Submission</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Rest Area</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Payment Counter</label>
-              </div>
-            </div>
-            <div class="fu-field"><label>Agent note on hub services to communicate</label><textarea placeholder="e.g. Hub provides full vehicle maintenance support. Driver can report vehicle issues at hub during working hours..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- EV Charging at Hub -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">3.3 · CONDITIONAL</span>
-              <span class="q-text">EV Charging at Hub — Is EV charging available at the hub?</span>
-            </div>
-            <span class="req o">IF EV</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-evhub')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-evhub')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-evhub">
-            <div class="followup-label">EV Charging Hub Details for Agent</div>
-            <div class="fu-field"><label>EV charger type at hub</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> AC Slow Charger</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> DC Fast Charger</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Both</label>
-              </div>
-            </div>
-            <div class="fu-row">
-              <div class="fu-field"><label>Average charge time (hours)</label><input type="number" placeholder="e.g. 4"></div>
-              <div class="fu-field"><label>Vehicle ready / dispatch time after charge</label><input type="time"></div>
-            </div>
-            <div class="fu-field"><label>Agent script on EV charging at hub</label><textarea placeholder="e.g. Your car will be charged overnight at hub. It will be ready for you by 6 AM every morning..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Vehicle Allocation Timing -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">3.4 · REQUIRED</span>
-              <span class="q-text">Vehicle Allocation Timing — When does the driver receive the car?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-timing')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-timing')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-timing">
-            <div class="followup-label">Car Allocation Timing Details</div>
-            <div class="fu-row">
-              <div class="fu-field"><label>Car collection time (from hub)</label><input type="time"></div>
-              <div class="fu-field"><label>Car return time (to hub)</label><input type="time"></div>
-            </div>
-            <div class="fu-field"><label>Agent note on vehicle timing to tell driver</label><textarea placeholder="e.g. You must reach hub by 6:00 AM to collect the car. Return deadline is 10:30 PM. Late returns attract a ₹500 penalty..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- POC at Hub -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">3.5 · REQUIRED</span>
-              <span class="q-text">Hub Point of Contact — Is there a designated POC driver should meet at hub?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-poc')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-poc')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-poc">
-            <div class="followup-label">Hub POC Details — Share with Agent & Driver</div>
-            <div class="fu-row">
-              <div class="fu-field"><label>POC Full Name</label><input type="text" placeholder="e.g. Rajesh Kumar"></div>
-              <div class="fu-field"><label>POC Contact Number</label><input type="tel" placeholder="e.g. +91 98765 43210"></div>
-            </div>
-            <div class="fu-field"><label>Designation / Role</label><input type="text" placeholder="e.g. Hub Manager, Fleet Supervisor"></div>
-            <div class="fu-field"><label>Agent instructions on introducing the driver to POC</label><textarea placeholder="e.g. Tell driver to ask for Mr. Rajesh at the Gachibowli hub. He handles all vehicle handovers between 6 AM – 9 AM..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Duration vehicle stays with driver -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">3.6 · REQUIRED</span>
-              <span class="q-text">Car Custody Duration — How long does the vehicle remain with the driver?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-custody')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-custody')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-custody">
-            <div class="followup-label">Car Custody Duration for Agent</div>
-            <div class="fu-field"><label>Car custody duration</label>
-              <select><option>8 hours (Day shift)</option><option>12 hours</option><option>16 hours</option><option>24 hours (Full day)</option><option>Overnight with driver</option><option>Weekly rotation</option></select>
-            </div>
-            <div class="fu-field"><label>Agent note to driver on car custody</label><textarea placeholder="e.g. The car will be with you for 12 hours per shift. You are fully responsible for the vehicle during that time..."></textarea></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-    <!-- ══════════════════════════════════
+<div class="form-section" id="s3">
+<div class="sec-header">
+<div class="sec-num c3">3</div>
+<div class="sec-info">
+<div class="sec-title">Hub Details</div>
+<div class="sec-desc">Locations, services, EV charging, timings &amp; point of contact</div>
+</div>
+<div class="sec-tag">CLIENT FILL</div>
+</div>
+<div class="sec-body">
+<!-- Hub Locations -->
+<div class="q-block" data-q="hub_locations_are_hub_locations_defined_to_inform_drivers">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">3.1 · REQUIRED</span>
+<span class="q-text">Hub Locations — Are hub locations defined to inform drivers?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-hubloc')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-hubloc')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-hubloc">
+<div class="followup-label">Hub Location Details for Agent</div>
+<div class="fu-field"><label>Hub city / area names (press Enter to add)</label>
+<div class="tag-wrap" id="tw-hubs"><input class="tag-input-bare" onkeydown="addTag(event,this)" placeholder="e.g. Hyderabad — Gachibowli…"/></div>
+</div>
+<div class="fu-field"><label>Full address / landmark details for agent reference</label><textarea placeholder="e.g. Hub 1: Plot 42, Gachibowli, Opp. DLF, Contact: 9876543210
+Hub 2: ..."></textarea></div>
+</div>
+</div>
+<!-- Services at Hub -->
+<div class="q-block" data-q="hub_services_are_specific_services_available_at_the_hub">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">3.2 · REQUIRED</span>
+<span class="q-text">Hub Services — Are specific services available at the hub?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-hubsvc')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-hubsvc')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-hubsvc">
+<div class="followup-label">Available Hub Services — For Agent Reference</div>
+<div class="fu-field"><label>Services available (select all)</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Vehicle Handover</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Fueling</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> EV Charging</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Servicing / Maintenance</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Driver Onboarding Desk</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Document Submission</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Rest Area</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Payment Counter</label>
+</div>
+</div>
+<div class="fu-field"><label>Agent note on hub services to communicate</label><textarea placeholder="e.g. Hub provides full vehicle maintenance support. Driver can report vehicle issues at hub during working hours..."></textarea></div>
+</div>
+</div>
+<!-- EV Charging at Hub -->
+<div class="q-block" data-q="ev_charging_at_hub_is_ev_charging_available_at_the_hub">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">3.3 · CONDITIONAL</span>
+<span class="q-text">EV Charging at Hub — Is EV charging available at the hub?</span>
+</div>
+<span class="req o">IF EV</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-evhub')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-evhub')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-evhub">
+<div class="followup-label">EV Charging Hub Details for Agent</div>
+<div class="fu-field"><label>EV charger type at hub</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> AC Slow Charger</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> DC Fast Charger</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Both</label>
+</div>
+</div>
+<div class="fu-row">
+<div class="fu-field"><label>Average charge time (hours)</label><input placeholder="e.g. 4" type="number"/></div>
+<div class="fu-field"><label>Vehicle ready / dispatch time after charge</label><input type="time"/></div>
+</div>
+<div class="fu-field"><label>Agent script on EV charging at hub</label><textarea placeholder="e.g. Your car will be charged overnight at hub. It will be ready for you by 6 AM every morning..."></textarea></div>
+</div>
+</div>
+<!-- Vehicle Allocation Timing -->
+<div class="q-block" data-q="vehicle_allocation_timing_when_does_the_driver_receive_the_car">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">3.4 · REQUIRED</span>
+<span class="q-text">Vehicle Allocation Timing — When does the driver receive the car?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-timing')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-timing')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-timing">
+<div class="followup-label">Car Allocation Timing Details</div>
+<div class="fu-row">
+<div class="fu-field"><label>Car collection time (from hub)</label><input type="time"/></div>
+<div class="fu-field"><label>Car return time (to hub)</label><input type="time"/></div>
+</div>
+<div class="fu-field"><label>Agent note on vehicle timing to tell driver</label><textarea placeholder="e.g. You must reach hub by 6:00 AM to collect the car. Return deadline is 10:30 PM. Late returns attract a ₹500 penalty..."></textarea></div>
+</div>
+</div>
+<!-- POC at Hub -->
+<div class="q-block" data-q="hub_point_of_contact_is_there_a_designated_poc_driver_should_meet_at_hub">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">3.5 · REQUIRED</span>
+<span class="q-text">Hub Point of Contact — Is there a designated POC driver should meet at hub?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-poc')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-poc')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-poc">
+<div class="followup-label">Hub POC Details — Share with Agent &amp; Driver</div>
+<div class="fu-row">
+<div class="fu-field"><label>POC Full Name</label><input placeholder="e.g. Rajesh Kumar" type="text"/></div>
+<div class="fu-field"><label>POC Contact Number</label><input placeholder="e.g. +91 98765 43210" type="tel"/></div>
+</div>
+<div class="fu-field"><label>Designation / Role</label><input placeholder="e.g. Hub Manager, Fleet Supervisor" type="text"/></div>
+<div class="fu-field"><label>Agent instructions on introducing the driver to POC</label><textarea placeholder="e.g. Tell driver to ask for Mr. Rajesh at the Gachibowli hub. He handles all vehicle handovers between 6 AM – 9 AM..."></textarea></div>
+</div>
+</div>
+<!-- Duration vehicle stays with driver -->
+<div class="q-block" data-q="car_custody_duration_how_long_does_the_vehicle_remain_with_the_driver">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">3.6 · REQUIRED</span>
+<span class="q-text">Car Custody Duration — How long does the vehicle remain with the driver?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-custody')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-custody')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-custody">
+<div class="followup-label">Car Custody Duration for Agent</div>
+<div class="fu-field"><label>Car custody duration</label>
+<select><option>8 hours (Day shift)</option><option>12 hours</option><option>16 hours</option><option>24 hours (Full day)</option><option>Overnight with driver</option><option>Weekly rotation</option></select>
+</div>
+<div class="fu-field"><label>Agent note to driver on car custody</label><textarea placeholder="e.g. The car will be with you for 12 hours per shift. You are fully responsible for the vehicle during that time..."></textarea></div>
+</div>
+</div>
+</div>
+</div>
+<!-- ══════════════════════════════════
          SECTION 4 – CAR HANDLING & ALLOCATION MODEL
     ══════════════════════════════════ -->
-    <div class="form-section" id="s4">
-      <div class="sec-header">
-        <div class="sec-num c4">4</div>
-        <div class="sec-info">
-          <div class="sec-title">Car Handling & Allocation Model</div>
-          <div class="sec-desc">Payout, platforms, incentives, benefits & work contracts</div>
-        </div>
-        <div class="sec-tag">CLIENT FILL</div>
-      </div>
-      <div class="sec-body">
-
-        <!-- Car Allocation Model -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">4.1 · REQUIRED</span>
-              <span class="q-text">Car Allocation Model — Is the model defined for how car is given to driver?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-cam')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-cam')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-cam">
-            <div class="followup-label">Car Allocation Model Details for Agent</div>
-            <div class="fu-field"><label>Allocation model type</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Rental / Subscription</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Revenue Share</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Company Car + Fixed Salary</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Driver-Owned Vehicle</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Lease-to-Own</label>
-              </div>
-            </div>
-            <div class="fu-field"><label>Agent explanation script for this model</label><textarea placeholder="e.g. We will give you the car on a rental basis. ₹800/day deducted from your earnings. You keep all trip income above that..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Payout Structure -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">4.2 · REQUIRED</span>
-              <span class="q-text">Driver Payout Structure — Is payout frequency and structure defined?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-payout')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-payout')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-payout">
-            <div class="followup-label">Payout Details for Agent</div>
-            <div class="fu-row">
-              <div class="fu-field"><label>Payout frequency</label>
-                <select><option>Daily</option><option>Weekly</option><option>Bi-weekly</option><option>Monthly</option></select>
-              </div>
-              <div class="fu-field"><label>Salary credit date (if monthly)</label><input type="number" min="1" max="31" placeholder="e.g. 5th"></div>
-            </div>
-            <div class="fu-field"><label>Payout script for agent to explain to driver</label><textarea placeholder="e.g. Your salary will be credited on the 5th of every month directly to your bank account..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Contact for Salary Issues -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">4.3 · REQUIRED</span>
-              <span class="q-text">Salary Issues Contact — Is there a dedicated contact for salary delays?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-salesc')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-salesc')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-salesc">
-            <div class="followup-label">Salary Escalation Contact for Agent</div>
-            <div class="fu-row">
-              <div class="fu-field"><label>Contact Name</label><input type="text" placeholder="e.g. Accounts Team — Priya"></div>
-              <div class="fu-field"><label>Contact Number / Email</label><input type="text" placeholder="e.g. +91 9876543210"></div>
-            </div>
-            <div class="fu-field"><label>Agent escalation script for salary complaints</label><textarea placeholder="e.g. If salary is delayed beyond the 7th, driver should call Priya at accounts: 9876543210. Do not promise a date — escalate to us..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Work Platforms -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">4.4 · REQUIRED</span>
-              <span class="q-text">Work Platforms — Are work platforms (Uber, Rapido, etc.) defined?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-platforms')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-platforms')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-platforms">
-            <div class="followup-label">Platform Details for Agent</div>
-            <div class="fu-field"><label>Platforms driver will work on</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Rapido</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Uber</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Ola</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> InDriver</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Savaari</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Corporate App (Internal)</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Direct Customer Calls</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Rental Bookings</label>
-              </div>
-            </div>
-            <div class="fu-field"><label>Agent script on platform usage to explain to driver</label><textarea placeholder="e.g. You will primarily work on Rapido and Uber. We will help you set up the profile. Your earnings will directly come from the app..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Rental Plans -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">4.5 · OPTIONAL</span>
-              <span class="q-text">Rental Plans & Policies — Are rental plans available to share?</span>
-            </div>
-            <span class="req o">OPTIONAL</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-rental')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-rental')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-rental">
-            <div class="followup-label">Rental Plan Details for Agent</div>
-            <div class="fu-field"><label>Rental plan options and pricing</label><textarea placeholder="e.g. Plan A: ₹700/day (weekdays). Plan B: ₹900/day (weekend). Weekly: ₹4500. Security deposit: ₹5000 refundable..."></textarea></div>
-            <div class="fu-field"><label>Payment methods accepted for rent</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> UPI</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Bank Transfer</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Cash</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Auto-deduct from earnings</label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Overtime -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">4.6 · REQUIRED</span>
-              <span class="q-text">Overtime Charges — Is there an overtime policy?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-ot')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-ot')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-ot">
-            <div class="followup-label">Overtime Policy for Agent</div>
-            <div class="fu-field"><label>Overtime rate / structure</label><input type="text" placeholder="e.g. ₹50/hour beyond 8 hours, 1.5x rate after 10 PM..."></div>
-            <div class="fu-field"><label>Agent note on overtime to communicate</label><textarea placeholder="e.g. If you work beyond your 8 hour shift, you will earn ₹50 per extra hour credited same week..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Incentives -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">4.7 · REQUIRED</span>
-              <span class="q-text">Incentive Structure — Are incentives/bonuses available for drivers?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-incen')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-incen')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-incen">
-            <div class="followup-label">Incentive Details for Agent</div>
-            <div class="fu-field"><label>Incentive structure details</label><textarea placeholder="e.g. ₹2000 bonus for 150+ trips/month. ₹500 for maintaining 4.8+ rating for 30 days. Referral bonus: ₹1000/driver joined..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Offers / Bonuses -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">4.8 · OPTIONAL</span>
-              <span class="q-text">Offers / Bonuses — Are there any active offers or joining bonuses?</span>
-            </div>
-            <span class="req o">OPTIONAL</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-offers')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-offers')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-offers">
-            <div class="followup-label">Offer Details — Agent Sales Points</div>
-            <div class="fu-field"><label>Active offers / campaigns (agent should pitch these)</label><textarea placeholder="e.g. Joining bonus: ₹3000 on completing first 50 trips. Festive offer: Extra ₹200/day during Diwali week..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Additional Benefits -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">4.9 · OPTIONAL</span>
-              <span class="q-text">Additional Benefits — Are non-cash benefits offered to drivers?</span>
-            </div>
-            <span class="req o">OPTIONAL</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-bene')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-bene')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-bene">
-            <div class="followup-label">Benefits to Highlight — Agent Communication Points</div>
-            <div class="fu-field"><label>Additional benefits (select all applicable)</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Accidental Insurance</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Medical Cover</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> PF / ESIC</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Uniform Provided</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Mobile / SIM Card</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Fuel Card</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Free Maintenance</label>
-              </div>
-            </div>
-            <div class="fu-field"><label>Agent pitch note on benefits</label><textarea placeholder="e.g. We offer personal accident insurance worth ₹5 Lakh at no cost to the driver. Uniform is provided free on joining..."></textarea></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-    <!-- ══════════════════════════════════
+<div class="form-section" id="s4">
+<div class="sec-header">
+<div class="sec-num c4">4</div>
+<div class="sec-info">
+<div class="sec-title">Car Handling &amp; Allocation Model</div>
+<div class="sec-desc">Payout, platforms, incentives, benefits &amp; work contracts</div>
+</div>
+<div class="sec-tag">CLIENT FILL</div>
+</div>
+<div class="sec-body">
+<!-- Car Allocation Model -->
+<div class="q-block" data-q="car_allocation_model_is_the_model_defined_for_how_car_is_given_to_driver">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">4.1 · REQUIRED</span>
+<span class="q-text">Car Allocation Model — Is the model defined for how car is given to driver?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-cam')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-cam')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-cam">
+<div class="followup-label">Car Allocation Model Details for Agent</div>
+<div class="fu-field"><label>Allocation model type</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Rental / Subscription</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Revenue Share</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Company Car + Fixed Salary</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Driver-Owned Vehicle</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Lease-to-Own</label>
+</div>
+</div>
+<div class="fu-field"><label>Agent explanation script for this model</label><textarea placeholder="e.g. We will give you the car on a rental basis. ₹800/day deducted from your earnings. You keep all trip income above that..."></textarea></div>
+</div>
+</div>
+<!-- Payout Structure -->
+<div class="q-block" data-q="driver_payout_structure_is_payout_frequency_and_structure_defined">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">4.2 · REQUIRED</span>
+<span class="q-text">Driver Payout Structure — Is payout frequency and structure defined?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-payout')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-payout')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-payout">
+<div class="followup-label">Payout Details for Agent</div>
+<div class="fu-row">
+<div class="fu-field"><label>Payout frequency</label>
+<select><option>Daily</option><option>Weekly</option><option>Bi-weekly</option><option>Monthly</option></select>
+</div>
+<div class="fu-field"><label>Salary credit date (if monthly)</label><input max="31" min="1" placeholder="e.g. 5th" type="number"/></div>
+</div>
+<div class="fu-field"><label>Payout script for agent to explain to driver</label><textarea placeholder="e.g. Your salary will be credited on the 5th of every month directly to your bank account..."></textarea></div>
+</div>
+</div>
+<!-- Contact for Salary Issues -->
+<div class="q-block" data-q="salary_issues_contact_is_there_a_dedicated_contact_for_salary_delays">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">4.3 · REQUIRED</span>
+<span class="q-text">Salary Issues Contact — Is there a dedicated contact for salary delays?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-salesc')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-salesc')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-salesc">
+<div class="followup-label">Salary Escalation Contact for Agent</div>
+<div class="fu-row">
+<div class="fu-field"><label>Contact Name</label><input placeholder="e.g. Accounts Team — Priya" type="text"/></div>
+<div class="fu-field"><label>Contact Number / Email</label><input placeholder="e.g. +91 9876543210" type="text"/></div>
+</div>
+<div class="fu-field"><label>Agent escalation script for salary complaints</label><textarea placeholder="e.g. If salary is delayed beyond the 7th, driver should call Priya at accounts: 9876543210. Do not promise a date — escalate to us..."></textarea></div>
+</div>
+</div>
+<!-- Work Platforms -->
+<div class="q-block" data-q="work_platforms_are_work_platforms_uber_rapido_etc_defined">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">4.4 · REQUIRED</span>
+<span class="q-text">Work Platforms — Are work platforms (Uber, Rapido, etc.) defined?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-platforms')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-platforms')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-platforms">
+<div class="followup-label">Platform Details for Agent</div>
+<div class="fu-field"><label>Platforms driver will work on</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Rapido</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Uber</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Ola</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> InDriver</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Savaari</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Corporate App (Internal)</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Direct Customer Calls</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Rental Bookings</label>
+</div>
+</div>
+<div class="fu-field"><label>Agent script on platform usage to explain to driver</label><textarea placeholder="e.g. You will primarily work on Rapido and Uber. We will help you set up the profile. Your earnings will directly come from the app..."></textarea></div>
+</div>
+</div>
+<!-- Rental Plans -->
+<div class="q-block" data-q="rental_plans_policies_are_rental_plans_available_to_share">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">4.5 · OPTIONAL</span>
+<span class="q-text">Rental Plans &amp; Policies — Are rental plans available to share?</span>
+</div>
+<span class="req o">OPTIONAL</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-rental')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-rental')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-rental">
+<div class="followup-label">Rental Plan Details for Agent</div>
+<div class="fu-field"><label>Rental plan options and pricing</label><textarea placeholder="e.g. Plan A: ₹700/day (weekdays). Plan B: ₹900/day (weekend). Weekly: ₹4500. Security deposit: ₹5000 refundable..."></textarea></div>
+<div class="fu-field"><label>Payment methods accepted for rent</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> UPI</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Bank Transfer</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Cash</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Auto-deduct from earnings</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Overtime -->
+<div class="q-block" data-q="overtime_charges_is_there_an_overtime_policy">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">4.6 · REQUIRED</span>
+<span class="q-text">Overtime Charges — Is there an overtime policy?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-ot')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-ot')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-ot">
+<div class="followup-label">Overtime Policy for Agent</div>
+<div class="fu-field"><label>Overtime rate / structure</label><input placeholder="e.g. ₹50/hour beyond 8 hours, 1.5x rate after 10 PM..." type="text"/></div>
+<div class="fu-field"><label>Agent note on overtime to communicate</label><textarea placeholder="e.g. If you work beyond your 8 hour shift, you will earn ₹50 per extra hour credited same week..."></textarea></div>
+</div>
+</div>
+<!-- Incentives -->
+<div class="q-block" data-q="incentive_structure_are_incentives_bonuses_available_for_drivers">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">4.7 · REQUIRED</span>
+<span class="q-text">Incentive Structure — Are incentives/bonuses available for drivers?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-incen')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-incen')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-incen">
+<div class="followup-label">Incentive Details for Agent</div>
+<div class="fu-field"><label>Incentive structure details</label><textarea placeholder="e.g. ₹2000 bonus for 150+ trips/month. ₹500 for maintaining 4.8+ rating for 30 days. Referral bonus: ₹1000/driver joined..."></textarea></div>
+</div>
+</div>
+<!-- Offers / Bonuses -->
+<div class="q-block" data-q="offers_bonuses_are_there_any_active_offers_or_joining_bonuses">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">4.8 · OPTIONAL</span>
+<span class="q-text">Offers / Bonuses — Are there any active offers or joining bonuses?</span>
+</div>
+<span class="req o">OPTIONAL</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-offers')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-offers')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-offers">
+<div class="followup-label">Offer Details — Agent Sales Points</div>
+<div class="fu-field"><label>Active offers / campaigns (agent should pitch these)</label><textarea placeholder="e.g. Joining bonus: ₹3000 on completing first 50 trips. Festive offer: Extra ₹200/day during Diwali week..."></textarea></div>
+</div>
+</div>
+<!-- Additional Benefits -->
+<div class="q-block" data-q="additional_benefits_are_non_cash_benefits_offered_to_drivers">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">4.9 · OPTIONAL</span>
+<span class="q-text">Additional Benefits — Are non-cash benefits offered to drivers?</span>
+</div>
+<span class="req o">OPTIONAL</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-bene')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-bene')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-bene">
+<div class="followup-label">Benefits to Highlight — Agent Communication Points</div>
+<div class="fu-field"><label>Additional benefits (select all applicable)</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Accidental Insurance</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Medical Cover</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> PF / ESIC</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Uniform Provided</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Mobile / SIM Card</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Fuel Card</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Free Maintenance</label>
+</div>
+</div>
+<div class="fu-field"><label>Agent pitch note on benefits</label><textarea placeholder="e.g. We offer personal accident insurance worth ₹5 Lakh at no cost to the driver. Uniform is provided free on joining..."></textarea></div>
+</div>
+</div>
+</div>
+</div>
+<!-- ══════════════════════════════════
          SECTION 5 – ONBOARDING PROCESS
     ══════════════════════════════════ -->
-    <div class="form-section" id="s5">
-      <div class="sec-header">
-        <div class="sec-num c5">5</div>
-        <div class="sec-info">
-          <div class="sec-title">Onboarding Process</div>
-          <div class="sec-desc">Driver onboarding steps, platform setup, routes, contract & call transfer</div>
-        </div>
-        <div class="sec-tag">CLIENT FILL</div>
-      </div>
-      <div class="sec-body">
-
-        <!-- Driver Onboarding Steps -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">5.1 · REQUIRED</span>
-              <span class="q-text">Onboarding Steps — Is the driver onboarding process step-by-step defined?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-onboard')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-onboard')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-onboard">
-            <div class="followup-label">Onboarding Steps — Agent Script</div>
-            <div class="fu-field"><label>Step-by-step onboarding process (for agent to explain)</label><textarea style="min-height:100px" placeholder="Step 1: Submit Aadhaar, DL, Photo&#10;Step 2: Background verification (2-3 days)&#10;Step 3: Report to hub for vehicle demo&#10;Step 4: App profile creation on Rapido/Uber&#10;Step 5: First day briefing at hub..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Platform Profile Creation -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">5.2 · REQUIRED</span>
-              <span class="q-text">Platform Profile Setup — Is agent involved in helping driver create app profiles?</span>
-              <span class="q-sub">Uber, Rapido, Ola profile registration assistance</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-appsetup')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-appsetup')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-appsetup">
-            <div class="followup-label">App Profile Setup Instructions for Agent</div>
-            <div class="fu-field"><label>Platforms agent must assist with</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Rapido</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Uber</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Ola</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Internal App</label>
-              </div>
-            </div>
-            <div class="fu-field"><label>Profile creation process / steps for agent reference</label><textarea placeholder="e.g. For Rapido: Driver downloads app → Register with Aadhaar + DL → Upload RC → Wait 48 hrs for approval. Agent to follow up..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Additional Charges During Onboarding -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">5.3 · REQUIRED</span>
-              <span class="q-text">Onboarding Charges — Are there any additional charges during joining?</span>
-              <span class="q-sub">Platform fees, badge charges, deposit, kit cost</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-charges')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-charges')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-charges">
-            <div class="followup-label">Onboarding Charges — Agent Must Disclose</div>
-            <div class="fu-field"><label>Charges breakdown (agent must tell driver upfront)</label><textarea placeholder="e.g. Rapido badge: ₹200 one-time. Security deposit: ₹5000 (refundable). Uniform kit: Free. No hidden charges..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Rental Charges & Payment -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">5.4 · OPTIONAL</span>
-              <span class="q-text">Rental Charges at Onboarding — Is an initial rental deposit required?</span>
-            </div>
-            <span class="req o">OPTIONAL</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-rentdeposit')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-rentdeposit')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-rentdeposit">
-            <div class="followup-label">Rental Deposit Details for Agent</div>
-            <div class="fu-row">
-              <div class="fu-field"><label>Deposit Amount (₹)</label><input type="number" placeholder="e.g. 5000"></div>
-              <div class="fu-field"><label>Refundable?</label><select><option>Yes — fully refundable</option><option>Partially refundable</option><option>Non-refundable</option></select></div>
-            </div>
-            <div class="fu-field"><label>Payment methods for deposit</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> UPI</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Cash at Hub</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Bank Transfer</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Auto-deduct from first salary</label>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Work Routes -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">5.5 · REQUIRED</span>
-              <span class="q-text">Work Route Types — Are the business / route types defined?</span>
-              <span class="q-sub">Corporate, Direct customer, Airport, Hotel, etc.</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-routes')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-routes')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-routes">
-            <div class="followup-label">Route Type Details for Agent</div>
-            <div class="fu-field"><label>Available work route types</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Corporate Commute</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Direct Customer</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Airport Transfer</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Hotel / Hospitality</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Outstation</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> App-based (Rapido / Uber)</label>
-              </div>
-            </div>
-            <div class="fu-field"><label>Agent note on route types to explain driver earnings potential</label><textarea placeholder="e.g. Corporate routes offer fixed daily trips of 3-5 guaranteed. Airport runs are high-value but less frequent..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Contract Period -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">5.6 · REQUIRED</span>
-              <span class="q-text">Contract Period — Is there a defined contract/tenure for drivers?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-contract')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-contract')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-contract">
-            <div class="followup-label">Contract Terms for Agent</div>
-            <div class="fu-field"><label>Contract period</label>
-              <select><option>No fixed contract (At-will)</option><option>3 Months Trial</option><option>6 Months</option><option>1 Year</option><option>2 Years</option></select>
-            </div>
-            <div class="fu-field"><label>Notice period required</label><input type="text" placeholder="e.g. 15 days notice from either side"></div>
-            <div class="fu-field"><label>Agent script on contract to tell driver</label><textarea placeholder="e.g. We start with a 3-month trial. If performance is good, you'll move to a yearly contract with enhanced benefits..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Call Transfer Policy -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">5.7 · REQUIRED</span>
-              <span class="q-text">Call Transfer Policy — Is call transfer to a higher authority allowed?</span>
-              <span class="q-sub">Situations where agent must transfer the call</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-calltx')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-calltx')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-calltx">
-            <div class="followup-label">Call Transfer Scenarios — Agent Must Know</div>
-            <div class="fu-field"><label>Transfer Scenarios (add each case below)</label>
-              <div class="cases-list" id="casesList">
-                <div class="case-item">
-                  <span class="case-label">Case 1</span>
-                  <input type="text" class="case-input" placeholder="e.g. Driver reports an accident — Transfer immediately to Supervisor">
-                  <button type="button" class="case-del" onclick="this.parentElement.remove()">×</button>
-                </div>
-                <div class="case-item">
-                  <span class="case-label">Case 2</span>
-                  <input type="text" class="case-input" placeholder="e.g. Driver disputes salary deduction — Transfer to Accounts team">
-                  <button type="button" class="case-del" onclick="this.parentElement.remove()">×</button>
-                </div>
-              </div>
-              <button type="button" class="add-case-btn" onclick="addCase()">+ Add Case</button>
-            </div>
-            <div class="fu-row">
-              <div class="fu-field"><label>Transfer-to Number / Extension</label><input type="tel" placeholder="e.g. Ext. 301 or +91 98765 00000"></div>
-              <div class="fu-field"><label>Transfer-to Person / Department</label><input type="text" placeholder="e.g. Senior Ops Manager"></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
-    <!-- ══════════════════════════════════
+<div class="form-section" id="s5">
+<div class="sec-header">
+<div class="sec-num c5">5</div>
+<div class="sec-info">
+<div class="sec-title">Onboarding Process</div>
+<div class="sec-desc">Driver onboarding steps, platform setup, routes, contract &amp; call transfer</div>
+</div>
+<div class="sec-tag">CLIENT FILL</div>
+</div>
+<div class="sec-body">
+<!-- Driver Onboarding Steps -->
+<div class="q-block" data-q="onboarding_steps_is_the_driver_onboarding_process_step_by_step_defined">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">5.1 · REQUIRED</span>
+<span class="q-text">Onboarding Steps — Is the driver onboarding process step-by-step defined?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-onboard')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-onboard')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-onboard">
+<div class="followup-label">Onboarding Steps — Agent Script</div>
+<div class="fu-field"><label>Step-by-step onboarding process (for agent to explain)</label><textarea placeholder="Step 1: Submit Aadhaar, DL, Photo
+Step 2: Background verification (2-3 days)
+Step 3: Report to hub for vehicle demo
+Step 4: App profile creation on Rapido/Uber
+Step 5: First day briefing at hub..." style="min-height:100px"></textarea></div>
+</div>
+</div>
+<!-- Platform Profile Creation -->
+<div class="q-block" data-q="platform_profile_setup_is_agent_involved_in_helping_driver_create_app_profiles">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">5.2 · REQUIRED</span>
+<span class="q-text">Platform Profile Setup — Is agent involved in helping driver create app profiles?</span>
+<span class="q-sub">Uber, Rapido, Ola profile registration assistance</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-appsetup')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-appsetup')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-appsetup">
+<div class="followup-label">App Profile Setup Instructions for Agent</div>
+<div class="fu-field"><label>Platforms agent must assist with</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Rapido</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Uber</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Ola</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Internal App</label>
+</div>
+</div>
+<div class="fu-field"><label>Profile creation process / steps for agent reference</label><textarea placeholder="e.g. For Rapido: Driver downloads app → Register with Aadhaar + DL → Upload RC → Wait 48 hrs for approval. Agent to follow up..."></textarea></div>
+</div>
+</div>
+<!-- Additional Charges During Onboarding -->
+<div class="q-block" data-q="onboarding_charges_are_there_any_additional_charges_during_joining">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">5.3 · REQUIRED</span>
+<span class="q-text">Onboarding Charges — Are there any additional charges during joining?</span>
+<span class="q-sub">Platform fees, badge charges, deposit, kit cost</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-charges')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-charges')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-charges">
+<div class="followup-label">Onboarding Charges — Agent Must Disclose</div>
+<div class="fu-field"><label>Charges breakdown (agent must tell driver upfront)</label><textarea placeholder="e.g. Rapido badge: ₹200 one-time. Security deposit: ₹5000 (refundable). Uniform kit: Free. No hidden charges..."></textarea></div>
+</div>
+</div>
+<!-- Rental Charges & Payment -->
+<div class="q-block" data-q="rental_charges_at_onboarding_is_an_initial_rental_deposit_required">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">5.4 · OPTIONAL</span>
+<span class="q-text">Rental Charges at Onboarding — Is an initial rental deposit required?</span>
+</div>
+<span class="req o">OPTIONAL</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-rentdeposit')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-rentdeposit')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-rentdeposit">
+<div class="followup-label">Rental Deposit Details for Agent</div>
+<div class="fu-row">
+<div class="fu-field"><label>Deposit Amount (₹)</label><input placeholder="e.g. 5000" type="number"/></div>
+<div class="fu-field"><label>Refundable?</label><select><option>Yes — fully refundable</option><option>Partially refundable</option><option>Non-refundable</option></select></div>
+</div>
+<div class="fu-field"><label>Payment methods for deposit</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> UPI</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Cash at Hub</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Bank Transfer</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Auto-deduct from first salary</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Work Routes -->
+<div class="q-block" data-q="work_route_types_are_the_business_route_types_defined">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">5.5 · REQUIRED</span>
+<span class="q-text">Work Route Types — Are the business / route types defined?</span>
+<span class="q-sub">Corporate, Direct customer, Airport, Hotel, etc.</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-routes')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-routes')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-routes">
+<div class="followup-label">Route Type Details for Agent</div>
+<div class="fu-field"><label>Available work route types</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Corporate Commute</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Direct Customer</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Airport Transfer</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Hotel / Hospitality</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Outstation</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> App-based (Rapido / Uber)</label>
+</div>
+</div>
+<div class="fu-field"><label>Agent note on route types to explain driver earnings potential</label><textarea placeholder="e.g. Corporate routes offer fixed daily trips of 3-5 guaranteed. Airport runs are high-value but less frequent..."></textarea></div>
+</div>
+</div>
+<!-- Contract Period -->
+<div class="q-block" data-q="contract_period_is_there_a_defined_contract_tenure_for_drivers">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">5.6 · REQUIRED</span>
+<span class="q-text">Contract Period — Is there a defined contract/tenure for drivers?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-contract')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-contract')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-contract">
+<div class="followup-label">Contract Terms for Agent</div>
+<div class="fu-field"><label>Contract period</label>
+<select><option>No fixed contract (At-will)</option><option>3 Months Trial</option><option>6 Months</option><option>1 Year</option><option>2 Years</option></select>
+</div>
+<div class="fu-field"><label>Notice period required</label><input placeholder="e.g. 15 days notice from either side" type="text"/></div>
+<div class="fu-field"><label>Agent script on contract to tell driver</label><textarea placeholder="e.g. We start with a 3-month trial. If performance is good, you'll move to a yearly contract with enhanced benefits..."></textarea></div>
+</div>
+</div>
+<!-- Call Transfer Policy -->
+<div class="q-block" data-q="call_transfer_policy_is_call_transfer_to_a_higher_authority_allowed">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">5.7 · REQUIRED</span>
+<span class="q-text">Call Transfer Policy — Is call transfer to a higher authority allowed?</span>
+<span class="q-sub">Situations where agent must transfer the call</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-calltx')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-calltx')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-calltx">
+<div class="followup-label">Call Transfer Scenarios — Agent Must Know</div>
+<div class="fu-field"><label>Transfer Scenarios (add each case below)</label>
+<div class="cases-list" id="casesList">
+<div class="case-item">
+<span class="case-label">Case 1</span>
+<input class="case-input" placeholder="e.g. Driver reports an accident — Transfer immediately to Supervisor" type="text"/>
+<button class="case-del" onclick="this.parentElement.remove()" type="button">×</button>
+</div>
+<div class="case-item">
+<span class="case-label">Case 2</span>
+<input class="case-input" placeholder="e.g. Driver disputes salary deduction — Transfer to Accounts team" type="text"/>
+<button class="case-del" onclick="this.parentElement.remove()" type="button">×</button>
+</div>
+</div>
+<button class="add-case-btn" onclick="addCase()" type="button">+ Add Case</button>
+</div>
+<div class="fu-row">
+<div class="fu-field"><label>Transfer-to Number / Extension</label><input placeholder="e.g. Ext. 301 or +91 98765 00000" type="tel"/></div>
+<div class="fu-field"><label>Transfer-to Person / Department</label><input placeholder="e.g. Senior Ops Manager" type="text"/></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ══════════════════════════════════
          SECTION 6 – AGENT DETAILS
     ══════════════════════════════════ -->
-    <div class="form-section" id="s6">
-      <div class="sec-header">
-        <div class="sec-num c6">6</div>
-        <div class="sec-info">
-          <div class="sec-title">Agent Details (Outbound Agent)</div>
-          <div class="sec-desc">Talk time, knowledge, behaviour, documents, salary & language requirements</div>
-        </div>
-        <div class="sec-tag">INTERNAL FILL</div>
-      </div>
-      <div class="sec-body">
-
-        <div class="info-note">
-          <span class="info-note-icon">⚠️</span>
-          <span>This section is to be filled by your internal team / operations manager — not shared with the client driver. This configures the agent who will make outbound calls.</span>
-        </div>
-
-        <!-- Max Talk Time -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">6.1 · REQUIRED</span>
-              <span class="q-text">Max Talk Time — Is there a defined maximum call duration for the agent?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-talktime')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-talktime')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-talktime">
-            <div class="followup-label">Talk Time Configuration</div>
-            <div class="fu-row">
-              <div class="fu-field"><label>Max talk time per call (minutes)</label><input type="number" min="1" placeholder="e.g. 5"></div>
-              <div class="fu-field"><label>Max calls per agent per day</label><input type="number" placeholder="e.g. 80"></div>
-            </div>
-            <div class="fu-field"><label>Additional call policy notes</label><textarea placeholder="e.g. If call exceeds 5 min, agent must inform driver they will call back and escalate. Never keep unresolved call open..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Knowledge / Data Expectations -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">6.2 · REQUIRED</span>
-              <span class="q-text">Agent Knowledge — Is there specific knowledge/data the agent must have?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-know')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-know')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-know">
-            <div class="followup-label">Agent Knowledge Requirements</div>
-            <div class="fu-field"><label>Topics agent must know before going live</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Fare / Pricing Policy</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Cancellation Rules</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Driver Penalty Policy</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Platform App Flows</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Escalation Matrix</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Onboarding Documents</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> City / Hub Locations</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> EV Policy</label>
-              </div>
-            </div>
-            <div class="fu-field"><label>Specific data / policies agent must not share / must avoid</label><textarea placeholder="e.g. Do not quote exact salary figures — say 'up to ₹25,000'. Do not discuss competitor pricing. Do not promise joining date..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Response Behaviour -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">6.3 · REQUIRED</span>
-              <span class="q-text">Response Behaviour — Is agent's tone, style and script defined?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-tone')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-tone')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-tone">
-            <div class="followup-label">Agent Tone & Script Configuration</div>
-            <div class="fu-field"><label>Expected communication tone</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Professional & Formal</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Friendly & Conversational</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Empathetic (for complaints)</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Persuasive (for sales)</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Neutral / Informational</label>
-              </div>
-            </div>
-            <div class="fu-field"><label>Call opening script for agent</label><textarea placeholder="e.g. 'Hello, am I speaking with [Name]? I'm calling from CABS regarding your driver application. Is this a good time to speak?'"></textarea></div>
-            <div class="fu-field"><label>Objection handling notes</label><textarea placeholder="e.g. If driver asks about salary guarantee — 'Our average driver earns ₹22,000. We provide full support to maximize your earnings...'"></textarea></div>
-          </div>
-        </div>
-
-        <!-- Required Documents for Agent -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">6.4 · REQUIRED</span>
-              <span class="q-text">Agent Documents — Are documents required from agent before hiring?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-agentdocs')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-agentdocs')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-agentdocs">
-            <div class="followup-label">Required Agent Documents</div>
-            <div class="fu-field"><label>Documents to collect from outbound agent</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Aadhaar Card</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> PAN Card</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> 10th / 12th Certificate</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Bank Passbook / Cancelled Cheque</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Passport Size Photo</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Previous Offer / Exp Letter</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Police Verification</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Address Proof</label>
-              </div>
-            </div>
-            <div class="fu-field"><label>Additional document notes</label><textarea placeholder="e.g. Typing speed test certificate required. Voice sample submission mandatory before interview..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Agent Salary Structure -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">6.5 · REQUIRED</span>
-              <span class="q-text">Agent Salary Structure — Is the outbound agent salary defined?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-agentsal')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-agentsal')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-agentsal">
-            <div class="followup-label">Agent Salary Configuration</div>
-            <div class="fu-field"><label>Agent salary type</label>
-              <select><option>Fixed Monthly</option><option>Fixed + Performance Bonus</option><option>Per Lead / Per Conversion</option><option>Hourly Rate</option></select>
-            </div>
-            <div class="fu-row">
-              <div class="fu-field"><label>Base Amount (₹)</label><input type="number" placeholder="e.g. 18000"></div>
-              <div class="fu-field"><label>Variable / Incentive (₹)</label><input type="number" placeholder="e.g. 4000"></div>
-            </div>
-            <div class="fu-field"><label>Performance target for incentive</label><textarea placeholder="e.g. Incentive unlocked on achieving 70%+ conversion rate or 100+ qualified leads per month..."></textarea></div>
-          </div>
-        </div>
-
-        <!-- Language Requirements -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">6.6 · REQUIRED</span>
-              <span class="q-text">Language Requirements — Is language proficiency defined for agent?</span>
-            </div>
-            <span class="req r">REQUIRED</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-lang')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-lang')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-lang">
-            <div class="followup-label">Language Requirements</div>
-            <div class="fu-field"><label>Languages agent must be fluent in</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Hindi</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> English</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Telugu</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Tamil</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Kannada</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Marathi</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Bengali</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Gujarati</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Malayalam</label>
-              </div>
-            </div>
-            <div class="fu-field"><label>Language assessment method</label><input type="text" placeholder="e.g. Telephonic test, Written test, No formal test required"></div>
-          </div>
-        </div>
-
-        <!-- Extra Agent Info -->
-        <div class="q-block">
-          <div class="q-row">
-            <div class="q-left">
-              <span class="q-code">6.7 · OPTIONAL</span>
-              <span class="q-text">Additional Agent Requirements — Any other special instructions?</span>
-            </div>
-            <span class="req o">OPTIONAL</span>
-            <div class="yn"><button type="button" class="yn-btn y" onclick="yt(this,'fu-agentextra')">YES</button><button type="button" class="yn-btn n" onclick="nt(this,'fu-agentextra')">NO</button></div>
-          </div>
-          <div class="followup" id="fu-agentextra">
-            <div class="followup-label">Additional Agent Notes</div>
-            <div class="fu-field"><label>Work mode</label>
-              <div class="chip-group">
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Work from Office</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Work from Home</label>
-                <label class="chip"><input type="checkbox" onchange="chk(this)"> Hybrid</label>
-              </div>
-            </div>
-            <div class="fu-field"><label>Other special requirements</label><textarea placeholder="e.g. Minimum typing speed 25 WPM. Own laptop required for WFH. Shift: 9 AM – 6 PM, Mon–Sat..."></textarea></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- SUBMIT SECTION -->
-    <div class="submit-section">
-      <div class="submit-title">Ready to Submit?</div>
-      <div class="submit-sub">Please review all sections before submitting. Fields marked <strong>REQUIRED</strong> must have a Yes/No answer. Submitted data will be used to configure the outbound agent.</div>
-      <div class="submit-row">
-        <button type="button" class="btn-reset" onclick="resetAll()">↺ Reset Form</button>
-        <button type="button" class="btn-preview" onclick="previewSummary()">📋 Preview Summary</button>
-        <button type="button" class="btn-submit" onclick="submitForm()">Submit Configuration →</button>
-      </div>
-    </div>
-
-  </form>
-  </main>
+<div class="form-section" id="s6">
+<div class="sec-header">
+<div class="sec-num c6">6</div>
+<div class="sec-info">
+<div class="sec-title">Agent Details (Outbound Agent)</div>
+<div class="sec-desc">Talk time, knowledge, behaviour, documents, salary &amp; language requirements</div>
 </div>
-
+<div class="sec-tag">INTERNAL FILL</div>
+</div>
+<div class="sec-body">
+<div class="info-note">
+<span class="info-note-icon">⚠️</span>
+<span>This section is to be filled by your internal team / operations manager — not shared with the client driver. This configures the agent who will make outbound calls.</span>
+</div>
+<!-- Max Talk Time -->
+<div class="q-block" data-q="max_talk_time_is_there_a_defined_maximum_call_duration_for_the_agent">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">6.1 · REQUIRED</span>
+<span class="q-text">Max Talk Time — Is there a defined maximum call duration for the agent?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-talktime')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-talktime')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-talktime">
+<div class="followup-label">Talk Time Configuration</div>
+<div class="fu-row">
+<div class="fu-field"><label>Max talk time per call (minutes)</label><input min="1" placeholder="e.g. 5" type="number"/></div>
+<div class="fu-field"><label>Max calls per agent per day</label><input placeholder="e.g. 80" type="number"/></div>
+</div>
+<div class="fu-field"><label>Additional call policy notes</label><textarea placeholder="e.g. If call exceeds 5 min, agent must inform driver they will call back and escalate. Never keep unresolved call open..."></textarea></div>
+</div>
+</div>
+<!-- Knowledge / Data Expectations -->
+<div class="q-block" data-q="agent_knowledge_is_there_specific_knowledge_data_the_agent_must_have">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">6.2 · REQUIRED</span>
+<span class="q-text">Agent Knowledge — Is there specific knowledge/data the agent must have?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-know')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-know')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-know">
+<div class="followup-label">Agent Knowledge Requirements</div>
+<div class="fu-field"><label>Topics agent must know before going live</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Fare / Pricing Policy</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Cancellation Rules</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Driver Penalty Policy</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Platform App Flows</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Escalation Matrix</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Onboarding Documents</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> City / Hub Locations</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> EV Policy</label>
+</div>
+</div>
+<div class="fu-field"><label>Specific data / policies agent must not share / must avoid</label><textarea placeholder="e.g. Do not quote exact salary figures — say 'up to ₹25,000'. Do not discuss competitor pricing. Do not promise joining date..."></textarea></div>
+</div>
+</div>
+<!-- Response Behaviour -->
+<div class="q-block" data-q="response_behaviour_is_agent_s_tone_style_and_script_defined">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">6.3 · REQUIRED</span>
+<span class="q-text">Response Behaviour — Is agent's tone, style and script defined?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-tone')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-tone')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-tone">
+<div class="followup-label">Agent Tone &amp; Script Configuration</div>
+<div class="fu-field"><label>Expected communication tone</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Professional &amp; Formal</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Friendly &amp; Conversational</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Empathetic (for complaints)</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Persuasive (for sales)</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Neutral / Informational</label>
+</div>
+</div>
+<div class="fu-field"><label>Call opening script for agent</label><textarea placeholder="e.g. 'Hello, am I speaking with [Name]? I'm calling from CABS regarding your driver application. Is this a good time to speak?'"></textarea></div>
+<div class="fu-field"><label>Objection handling notes</label><textarea placeholder="e.g. If driver asks about salary guarantee — 'Our average driver earns ₹22,000. We provide full support to maximize your earnings...'"></textarea></div>
+</div>
+</div>
+<!-- Required Documents for Agent -->
+<div class="q-block" data-q="agent_documents_are_documents_required_from_agent_before_hiring">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">6.4 · REQUIRED</span>
+<span class="q-text">Agent Documents — Are documents required from agent before hiring?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-agentdocs')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-agentdocs')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-agentdocs">
+<div class="followup-label">Required Agent Documents</div>
+<div class="fu-field"><label>Documents to collect from outbound agent</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Aadhaar Card</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> PAN Card</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> 10th / 12th Certificate</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Bank Passbook / Cancelled Cheque</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Passport Size Photo</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Previous Offer / Exp Letter</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Police Verification</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Address Proof</label>
+</div>
+</div>
+<div class="fu-field"><label>Additional document notes</label><textarea placeholder="e.g. Typing speed test certificate required. Voice sample submission mandatory before interview..."></textarea></div>
+</div>
+</div>
+<!-- Agent Salary Structure -->
+<div class="q-block" data-q="agent_salary_structure_is_the_outbound_agent_salary_defined">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">6.5 · REQUIRED</span>
+<span class="q-text">Agent Salary Structure — Is the outbound agent salary defined?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-agentsal')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-agentsal')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-agentsal">
+<div class="followup-label">Agent Salary Configuration</div>
+<div class="fu-field"><label>Agent salary type</label>
+<select><option>Fixed Monthly</option><option>Fixed + Performance Bonus</option><option>Per Lead / Per Conversion</option><option>Hourly Rate</option></select>
+</div>
+<div class="fu-row">
+<div class="fu-field"><label>Base Amount (₹)</label><input placeholder="e.g. 18000" type="number"/></div>
+<div class="fu-field"><label>Variable / Incentive (₹)</label><input placeholder="e.g. 4000" type="number"/></div>
+</div>
+<div class="fu-field"><label>Performance target for incentive</label><textarea placeholder="e.g. Incentive unlocked on achieving 70%+ conversion rate or 100+ qualified leads per month..."></textarea></div>
+</div>
+</div>
+<!-- Language Requirements -->
+<div class="q-block" data-q="language_requirements_is_language_proficiency_defined_for_agent">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">6.6 · REQUIRED</span>
+<span class="q-text">Language Requirements — Is language proficiency defined for agent?</span>
+</div>
+<span class="req r">REQUIRED</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-lang')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-lang')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-lang">
+<div class="followup-label">Language Requirements</div>
+<div class="fu-field"><label>Languages agent must be fluent in</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Hindi</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> English</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Telugu</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Tamil</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Kannada</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Marathi</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Bengali</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Gujarati</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Malayalam</label>
+</div>
+</div>
+<div class="fu-field"><label>Language assessment method</label><input placeholder="e.g. Telephonic test, Written test, No formal test required" type="text"/></div>
+</div>
+</div>
+<!-- Extra Agent Info -->
+<div class="q-block" data-q="additional_agent_requirements_any_other_special_instructions">
+<div class="q-row">
+<div class="q-left">
+<span class="q-code">6.7 · OPTIONAL</span>
+<span class="q-text">Additional Agent Requirements — Any other special instructions?</span>
+</div>
+<span class="req o">OPTIONAL</span>
+<div class="yn"><button class="yn-btn y" onclick="yt(this,'fu-agentextra')" type="button">YES</button><button class="yn-btn n" onclick="nt(this,'fu-agentextra')" type="button">NO</button></div>
+</div>
+<div class="followup" id="fu-agentextra">
+<div class="followup-label">Additional Agent Notes</div>
+<div class="fu-field"><label>Work mode</label>
+<div class="chip-group">
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Work from Office</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Work from Home</label>
+<label class="chip"><input onchange="chk(this)" type="checkbox"/> Hybrid</label>
+</div>
+</div>
+<div class="fu-field"><label>Other special requirements</label><textarea placeholder="e.g. Minimum typing speed 25 WPM. Own laptop required for WFH. Shift: 9 AM – 6 PM, Mon–Sat..."></textarea></div>
+</div>
+</div>
+</div>
+</div>
+<!-- SUBMIT SECTION -->
+<div class="submit-section">
+<div class="submit-title">Ready to Submit?</div>
+<div class="submit-sub">Please review all sections before submitting. Fields marked <strong>REQUIRED</strong> must have a Yes/No answer. Submitted data will be used to configure the outbound agent.</div>
+<div class="submit-row">
+<button class="btn-reset" onclick="resetAll()" type="button">↺ Reset Form</button>
+<button class="btn-preview" onclick="previewSummary()" type="button">📋 Preview Summary</button>
+<button class="btn-submit" onclick="submitForm()" type="button">Submit Configuration →</button>
+</div>
+</div>
+</form>
+</main>
+</div>
 <!-- SUCCESS MODAL -->
 <div class="modal-bg" id="successModal">
-  <div class="modal">
-    <div class="modal-emoji">✅</div>
-    <div class="modal-title">Configuration Submitted!</div>
-    <div class="modal-body">Your CABS Outbound Agent configuration has been recorded. Our operations team will review and set up the agent profile within 24–48 hours.</div>
-    <div class="modal-ref" id="modalRef">—</div>
-    <button class="modal-close" onclick="document.getElementById('successModal').classList.remove('open')">Close</button>
-  </div>
+<div class="modal">
+<div class="modal-emoji">✅</div>
+<div class="modal-title">Configuration Submitted!</div>
+<div class="modal-body">Your CABS Outbound Agent configuration has been recorded. Our operations team will review and set up the agent profile within 24–48 hours.</div>
+<div class="modal-ref" id="modalRef">—</div>
+<button class="modal-close" onclick="document.getElementById('successModal').classList.remove('open')">Close</button>
 </div>
-
+</div>
 <script>
+
   // Init
+  const SCRIPT_URL = "https://docs.google.com/spreadsheets/d/1v1jxFoMzm6_TZ75usrtdm-SZ9pQCkLw77306M5hzbtk/edit?usp=sharing";
   const fid = 'CABS-' + Date.now().toString(36).toUpperCase().slice(-7);
   document.getElementById('fid').textContent = fid;
   document.getElementById('fdate').textContent = new Date().toLocaleDateString('en-IN', {day:'2-digit',month:'short',year:'numeric'});
@@ -1969,52 +1904,50 @@ body {
     group.querySelectorAll('.yn-btn').forEach(b => b.classList.remove('sel'));
     btn.classList.add('sel');
     const fu = document.getElementById(fuId);
-    if (fu) { fu.classList.remove('open'); }
+    if (fu) {
+      fu.classList.remove('open');
+      fu.querySelectorAll('input, textarea, select').forEach(el => {
+        if (el.type === 'checkbox' || el.type === 'radio') {
+          el.checked = false;
+        } else {
+          el.value = '';
+        }
+      });
+      fu.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+      fu.querySelectorAll('.tag-item').forEach(t => t.remove());
+    }
     updateProgress();
   }
 
-  // Chip toggle
-  function chk(input) {
-    input.parentElement.classList.toggle('on', input.checked);
+  // checkbox chips
+  function chk(cb) {
+    const chip = cb.closest('.chip');
+    if (chip) chip.classList.toggle('on', cb.checked);
   }
 
-  // Tag input
-  function addTag(e, input) {
-    if (e.key !== 'Enter') return;
-    e.preventDefault();
+  // dynamic tags
+  function addTag(btn) {
+    const wrap = btn.closest('.fu-field');
+    const input = wrap.querySelector('input');
+    const list = wrap.querySelector('.tag-list');
+    if (!input || !list) return;
     const val = input.value.trim();
     if (!val) return;
-    const wrap = input.parentElement;
     const tag = document.createElement('span');
     tag.className = 'tag-item';
-    tag.innerHTML = val + ' <span class="tag-x" onclick="this.parentElement.remove()">×</span>';
-    wrap.insertBefore(tag, input);
+    tag.innerHTML = `${val}<button type="button" onclick="this.parentElement.remove()">×</button>`;
+    list.appendChild(tag);
     input.value = '';
   }
 
-  // Add case
-  let caseCount = 2;
-  function addCase() {
-    caseCount++;
-    const list = document.getElementById('casesList');
-    const div = document.createElement('div');
-    div.className = 'case-item';
-    div.innerHTML = `<span class="case-label">Case ${caseCount}</span><input type="text" class="case-input" placeholder="Describe the scenario…"><button type="button" class="case-del" onclick="this.parentElement.remove()">×</button>`;
-    list.appendChild(div);
-  }
-
-  // Progress
+  // progress
   function updateProgress() {
-    const yns = document.querySelectorAll('.yn');
-    let total = yns.length, done = 0;
-    yns.forEach(g => { if (g.querySelector('.sel')) done++; });
-    const pct = total ? Math.round((done/total)*100) : 0;
-    document.getElementById('pbarFill').style.width = pct + '%';
-    document.getElementById('pbarPct').textContent = pct + '%';
-    updateDots();
-  }
+    const all = [...document.querySelectorAll('.yn')].length;
+    const answered = [...document.querySelectorAll('.yn')].filter(g => g.querySelector('.sel')).length;
+    const pct = all ? Math.round((answered / all) * 100) : 0;
+    document.getElementById('pfill').style.width = pct + '%';
+    document.getElementById('ppct').textContent = pct + '%';
 
-  function updateDots() {
     const sections = [
       {id:'s1', dot:'dot1', yns: document.querySelectorAll('#s1 .yn')},
       {id:'s2', dot:'dot2', yns: document.querySelectorAll('#s2 .yn')},
@@ -2025,9 +1958,9 @@ body {
     ];
     sections.forEach(s => {
       const dot = document.getElementById(s.dot);
-      let all = true;
-      s.yns.forEach(g => { if (!g.querySelector('.sel')) all = false; });
-      if (s.yns.length > 0 && all) dot.classList.add('done');
+      let allDone = true;
+      s.yns.forEach(g => { if (!g.querySelector('.sel')) allDone = false; });
+      if (s.yns.length > 0 && allDone) dot.classList.add('done');
       else dot.classList.remove('done');
     });
   }
@@ -2060,27 +1993,129 @@ body {
     alert(`Form Summary\n─────────────────\n✅ YES answers: ${yesCount}\n❌ NO answers: ${noCount}\n⚠️ Unanswered: ${unanswered}\n\nPlease answer all required fields before final submission.`);
   }
 
-  function submitForm() {
-    const unanswered = [...document.querySelectorAll('.yn')].filter(g => !g.querySelector('.sel'));
+  function normalizeKey(text, fallback) {
+    const cleaned = (text || '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '_')
+      .replace(/^_+|_+$/g, '')
+      .replace(/_+/g, '_');
+    return cleaned || fallback;
+  }
+
+  function collectFollowupData(block) {
+    const followup = block.querySelector('.followup');
+    if (!followup) return null;
+
+    const inputs = followup.querySelectorAll('input, select, textarea');
+    if (!inputs.length) return null;
+
+    const details = {};
+    let checkboxGroupIndex = 0;
+    let unlabeledIndex = 0;
+
+    inputs.forEach((input) => {
+      if (input.type === 'checkbox') {
+        const groupWrap = input.closest('.chip-group') || input.closest('.fu-field') || followup;
+        if (!groupWrap.dataset.groupKey) {
+          const groupLabel = groupWrap.closest('.fu-field')?.querySelector('label')?.innerText?.trim() || `checkbox_group_${++checkboxGroupIndex}`;
+          groupWrap.dataset.groupKey = normalizeKey(groupLabel, `checkbox_group_${checkboxGroupIndex}`);
+        }
+        const groupKey = groupWrap.dataset.groupKey;
+        if (!details[groupKey]) details[groupKey] = [];
+        if (input.checked) {
+          const optionText = input.closest('label')?.innerText?.trim() || input.value || 'selected';
+          details[groupKey].push(optionText);
+        }
+        return;
+      }
+
+      const fieldWrap = input.closest('.fu-field');
+      const rawLabel = fieldWrap?.querySelector('label')?.innerText?.trim() || input.getAttribute('placeholder') || input.name || '';
+      const fieldKey = normalizeKey(rawLabel, `field_${++unlabeledIndex}`);
+      details[fieldKey] = input.value.trim();
+    });
+
+    return details;
+  }
+
+  async function submitForm() {
+    const unanswered = [...document.querySelectorAll('.yn')]
+      .filter(g => !g.querySelector('.sel'));
+
     if (unanswered.length > 0) {
       const first = unanswered[0].closest('.q-block');
-      if (first) first.scrollIntoView({behavior:'smooth', block:'center'});
+      if (first) first.scrollIntoView({ behavior:'smooth', block:'center' });
       alert(`Please answer all questions before submitting.\n${unanswered.length} question(s) still unanswered.`);
       return;
     }
-    document.getElementById('modalRef').textContent = 'Reference: ' + fid;
-    document.getElementById('successModal').classList.add('open');
+
+    const payload = {
+      reference: fid,
+      submitted_at: new Date().toISOString(),
+      form_name: 'CABS Outbound Agent – Client Information Form'
+    };
+
+    document.querySelectorAll('.q-block').forEach((block, index) => {
+      const key = block.dataset.q || `q${index + 1}`;
+      const selectedBtn = block.querySelector('.yn .sel');
+      payload[key] = selectedBtn ? selectedBtn.textContent.trim() : '';
+
+      const questionText = block.querySelector('.q-text')?.textContent?.trim() || '';
+      if (questionText) payload[`${key}_question`] = questionText;
+
+      const details = collectFollowupData(block);
+      if (details && Object.keys(details).length) {
+        payload[`${key}_details`] = JSON.stringify(details);
+      } else {
+        payload[`${key}_details`] = '';
+      }
+    });
+
+    try {
+      const res = await fetch(SCRIPT_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        document.getElementById('modalRef').textContent = 'Reference: ' + fid;
+        document.getElementById('successModal').classList.add('open');
+      } else {
+        alert(result.message || 'Submission failed');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Something went wrong while saving data.');
+    }
   }
 
   function resetAll() {
     if (!confirm('Reset entire form? All data will be cleared.')) return;
     document.querySelectorAll('.yn-btn').forEach(b => b.classList.remove('sel'));
     document.querySelectorAll('.followup').forEach(f => f.classList.remove('open'));
-    document.querySelectorAll('.fu-field input, .fu-field textarea, .fu-field select').forEach(el => el.value = '');
-    document.querySelectorAll('.chip').forEach(c => { c.classList.remove('on'); c.querySelector('input').checked = false; });
+    document.querySelectorAll('.fu-field input, .fu-field textarea, .fu-field select').forEach(el => {
+      if (el.type === 'checkbox' || el.type === 'radio') {
+        el.checked = false;
+      } else {
+        el.value = '';
+      }
+    });
+    document.querySelectorAll('.chip').forEach(c => {
+      c.classList.remove('on');
+      const input = c.querySelector('input');
+      if (input) input.checked = false;
+    });
     document.querySelectorAll('.tag-item').forEach(t => t.remove());
     updateProgress();
   }
+
+  updateProgress();
+
 </script>
 </body>
 </html>
